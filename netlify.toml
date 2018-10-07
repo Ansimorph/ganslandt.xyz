@@ -10,5 +10,5 @@ ID = "ganslandt.xyz"
 # Everything redirects to index.html for now
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/"
   status = 301
