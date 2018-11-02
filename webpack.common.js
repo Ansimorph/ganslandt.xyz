@@ -87,6 +87,16 @@ module.exports = {
                 loader: "file-loader",
                 options: { name: "[name].[ext]" },
             },
+            {
+                test: /\.(cast5)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: { name: "[name]" },
+                    },
+                    { loader: "decrypt-loader" },
+                ],
+            },
         ],
     },
     output: {
@@ -114,5 +124,8 @@ module.exports = {
         hot: true,
         open: true,
         watchContentBase: true,
+    },
+    resolveLoader: {
+        modules: ["node_modules", path.resolve(__dirname, "loaders")],
     },
 };

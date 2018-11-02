@@ -2,10 +2,15 @@
     --bg: #ccc;
 }
 
+@font-face {
+    font-family: "Canela";
+    src: url("../fonts/Roboto-Regular.woff.cast5");
+}
+
 body {
     background-color: var(--bg);
     margin: 0;
-    font-family: Georgia, serif;
+    font-family: Canela, Georgia, serif;
     display: flex;
     align-items: center;
     justify-content: center;

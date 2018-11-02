@@ -44,5 +44,8 @@
         "webpack-cli": "^3.1.0",
         "webpack-dev-server": "^3.0.0",
         "webpack-merge": "^4.1.4"
+    },
+    "dependencies": {
+        "node-cipher": "^6.3.3"
     }
 }
