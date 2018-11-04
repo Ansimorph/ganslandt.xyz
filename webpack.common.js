@@ -6,6 +6,8 @@ const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin")
     .default;
 const PreloadWebpackPlugin = require("preload-webpack-plugin");
 
+require("dotenv").config();
+
 const basePath = process.cwd();
 const fontRegex = /\.(woff|woff2|eot|ttf|otf)$/;
 
@@ -96,7 +98,7 @@ module.exports = {
                     },
                     {
                         loader: "decryption-loader",
-                        options: { password: "test" },
+                        options: { password: process.env.PASSWORD },
                     },
                 ],
             },
