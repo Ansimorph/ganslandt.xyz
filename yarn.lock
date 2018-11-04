@@ -2050,6 +2050,14 @@ decode-uri-component@^0.2.0:
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
 
+decryption-loader@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/decryption-loader/-/decryption-loader-0.0.1.tgz#57184e827177f408781b4257e9ec999b5007ff73"
+  integrity sha512-5t987JvSCCd+67Qr8vGsYMW7Mry0c57Eg1W0gDet48A8AfYNvOzkYUtSmWj+GU/CzSdMSuIVkr5fqmoi+/vtzQ==
+  dependencies:
+    loader-utils "^1.1.0"
+    schema-utils "^1.0.0"
+
 deep-equal@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.0.1.tgz#f5d260292b660e084eff4cdbc9f08ad3247448b5"

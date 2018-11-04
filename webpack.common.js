@@ -128,7 +128,4 @@ module.exports = {
         open: true,
         watchContentBase: true,
     },
-    resolveLoader: {
-        modules: ["node_modules", path.resolve(__dirname, "loaders")],
-    },
 };
