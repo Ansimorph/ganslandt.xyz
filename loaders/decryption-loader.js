@@ -1,6 +1,6 @@
 const crypto = require("crypto");
 const loaderUtils = require("loader-utils");
-const schemaUtils = require("schema-utils");
+const validateOptions = require("schema-utils");
 const schema = require("./options-schema.json");
 
 const defaultOptions = {
@@ -22,7 +22,7 @@ module.exports = function decrypt(ciphertext) {
         loaderUtils.getOptions(this),
     );
 
-    // schemaUtils.validateOptions(schema, options, "Decryption Loader");
+    validateOptions(schema, options, "Decryption Loader");
 
     // Derive Key from password
     const key = crypto.pbkdf2Sync(
