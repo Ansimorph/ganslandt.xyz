@@ -94,7 +94,10 @@ module.exports = {
                         loader: "file-loader",
                         options: { name: "[name]" },
                     },
-                    { loader: "decrypt-loader" },
+                    {
+                        loader: "decryption-loader",
+                        options: { password: "test" },
+                    },
                 ],
             },
         ],
