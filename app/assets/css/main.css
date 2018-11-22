@@ -1,16 +1,23 @@
 :root {
-    --bg: #ccc;
+    --dark-grey: #303333;
+    --white: #fff;
 }
 
 @font-face {
     font-family: "Canela";
-    src: url("../fonts/Roboto-Regular.woff.cast5");
+    src: url("../fonts/CanelaDeck-Bold-Web.woff.cast5") format("woff"),
+        url("../fonts/CanelaDeck-Bold-Web.woff2.cast5") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
 }
 
 body {
-    background-color: var(--bg);
+    background-color: var(--dark-grey);
     margin: 0;
     font-family: Canela, Georgia, serif;
+    color: var(--white);
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
