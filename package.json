@@ -7,7 +7,7 @@
     "author": "Björn Ganslandt",
     "license": "MIT",
     "scripts": {
-        "watch": "webpack-dev-server --colors --inline --hot --config webpack.dev.js",
+        "watch": "webpack-dev-server --colors --inline --hot --host 0.0.0.0 --config webpack.dev.js",
         "build": "webpack --colors --config webpack.prod.js"
     },
     "devDependencies": {
