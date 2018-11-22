@@ -1,3 +1,5 @@
+@import "./headline.css";
+
 :root {
     --dark-grey: #303333;
     --white: #fff;
@@ -12,18 +14,16 @@
     font-stretch: normal;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     background-color: var(--dark-grey);
     margin: 0;
-    font-family: Canela, Georgia, serif;
     color: var(--white);
-    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-}
-
-.contact {
-    font-size: 1.5em;
 }

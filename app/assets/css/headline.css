@@ -1,0 +1,36 @@
+.headline,
+.headline__select {
+    font-size: 3.2rem;
+    color: var(--white);
+    font-weight: 700;
+    font-family: Canela, Georgia, serif;
+}
+
+.headline__select {
+    appearance: none;
+    background: none;
+    border: 0;
+    text-decoration: underline;
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+.headline__select-wrapper {
+    position: relative;
+
+    &::after {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 0.8rem solid transparent;
+        border-right: 0.8rem solid transparent;
+        border-top: 0.8rem solid currentColor;
+    }
+}

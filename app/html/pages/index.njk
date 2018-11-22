@@ -5,9 +5,19 @@
 {% block content %}
 
 <main>
-    <a class="contact" href="mailto:hi@ganslandt.xyz">hi@ganslandt.xyz</a>
-
-    <h1 class="headline">Björn Ganslandt is a frontend developer who loves design</h1>
+    <h1 class="headline">
+        Björn Ganslandt is a frontend developer who loves
+        <span class="headline__select-wrapper">
+            <select class="headline__select">
+                <option>design</option>
+                <option>CSS</option>
+                <option>design systems</option>
+                <option>Vue</option>
+                <option>HTML</option>
+                <option>to hear from you</option>
+            </select>
+        </span>
+    </h1>
 </main>
 
 {% endblock %}
