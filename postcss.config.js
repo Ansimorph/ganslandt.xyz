@@ -3,7 +3,7 @@ module.exports = ({ env }) => ({
     plugins: {
         "postcss-import": {},
         "postcss-nested": {},
-        "postcss-custom-properties": { preserve: false },
+        "postcss-css-variables": { preserve: false },
         autoprefixer: {},
         cssnano: env === "production" ? {} : false,
     },
