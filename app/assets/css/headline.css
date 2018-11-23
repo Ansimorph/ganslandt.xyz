@@ -14,8 +14,8 @@
     appearance: none;
     background: none;
     border: 0;
-    text-decoration: underline;
     opacity: 0;
+    cursor: pointer;
 
     &::-ms-expand {
         display: none;
@@ -28,6 +28,11 @@
     display: inline-block;
     position: relative;
     padding-right: calc(var(--dropdown-caret-size) * 2 + 0.4rem);
+    text-decoration: underline;
+
+    &:focus-within {
+        outline: 1px solid var(--blue);
+    }
 
     &::after {
         pointer-events: none;
