@@ -1,24 +1,11 @@
 {% extends "layouts/app.html" %}
 
-{% set title = 'Björn Ganslandt' %}
+{% set title = "Björn Ganslandt" %}
 
 {% block content %}
 
 <main>
-    <h1 class="headline">
-        Björn Ganslandt is a frontend developer who loves
-        <span class="headline__select-wrapper">
-            design
-            <select class="headline__select">
-                <option>design</option>
-                <option>CSS</option>
-                <option>design systems</option>
-                <option>Vue</option>
-                <option>HTML</option>
-                <option>to hear from you</option>
-            </select>
-        </span>
-    </h1>
+{% include "components/landing-headline.html" %}
 </main>
 
 {% endblock %}
