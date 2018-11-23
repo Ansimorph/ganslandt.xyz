@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Björn Ganslandt's website",
     "main": "index.js",
-    "repository": "git@github.com:joaopjt/webpack-nunjucks-boilerplate.git",
+    "repository": "git@github.com:Ansimorph/ganslandt.xyz.git",
     "author": "Björn Ganslandt",
     "license": "MIT",
     "scripts": {
