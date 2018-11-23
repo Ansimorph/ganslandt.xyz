@@ -1,11 +1,13 @@
-.headline {
+@import "../../variables.css";
+
+.landing-headline {
     font-size: 3.2rem;
     color: var(--white);
     font-weight: 700;
     font-family: Canela, Georgia, serif;
 }
 
-.headline__select {
+.landing-headline__select {
     position: absolute;
     left: 0;
     top: 0;
@@ -22,7 +24,7 @@
     }
 }
 
-.headline__select-wrapper {
+.landing-headline__select-wrapper {
     --dropdown-caret-size: 0.8rem;
 
     display: inline-block;

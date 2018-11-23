@@ -11,35 +11,31 @@ require("dotenv").config();
 const basePath = process.cwd();
 const fontRegex = /\.(woff|woff2|eot|ttf|otf)$/;
 
-const nunjucksContext = require("./app/data/index");
-
 const nunjucksOptions = JSON.stringify({
-    searchPaths: `${basePath}/app/html/`,
-    context: nunjucksContext,
+    searchPaths: `${basePath}/app/`,
 });
 
 const pages = glob
     .sync("**/*.njk", {
-        cwd: path.join(basePath, "app/html/pages/"),
+        cwd: path.join(basePath, "app/pages/"),
         root: "/",
     })
     .map(
         page =>
             new HtmlWebpackPlugin({
                 filename: page.replace("njk", "html"),
-                template: `app/html/pages/${page}`,
+                template: `app/pages/${page}`,
                 minify: {
                     removeComments: true,
                     collapseWhitespace: true,
                     conservativeCollapse: true,
                 },
-                inject: false, // Don't include the empty bundle
             }),
     );
 
 module.exports = {
     entry: {
-        app: ["./app/assets/js/index.js", "./app/assets/css/main.css"],
+        app: ["./app/landing.js"],
     },
     module: {
         rules: [

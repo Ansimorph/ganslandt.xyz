@@ -1,15 +1,9 @@
-@import "./headline.css";
-
-:root {
-    --dark-grey: #303333;
-    --white: #fff;
-    --blue: #4a90e2;
-}
+@import "../variables.css";
 
 @font-face {
     font-family: "Canela";
-    src: url("../fonts/CanelaDeck-Bold-Web.woff.cast5") format("woff"),
-        url("../fonts/CanelaDeck-Bold-Web.woff2.cast5") format("woff2");
+    src: url("../assets/fonts/CanelaDeck-Bold-Web.woff.cast5") format("woff"),
+        url("../assets/fonts/CanelaDeck-Bold-Web.woff2.cast5") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
