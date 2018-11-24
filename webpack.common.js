@@ -58,7 +58,10 @@ module.exports = {
                 test: /\.(njk|nunjucks)$/,
                 loader: [
                     "html-loader",
-                    `nunjucks-html-loader?${nunjucksOptions}`,
+                    {
+                        loader: "nunjucks-html-loader",
+                        options: nunjucksOptions,
+                    },
                 ],
             },
             {
