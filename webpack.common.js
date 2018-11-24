@@ -2,9 +2,7 @@ const path = require("path");
 const glob = require("glob");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin")
-    .default;
-const PreloadWebpackPlugin = require("preload-webpack-plugin");
+const Critters = require("critters-webpack-plugin");
 
 require("dotenv").config();
 
@@ -102,23 +100,12 @@ module.exports = {
     },
     output: {
         path: `${basePath}/dist`,
-        filename: "assets/js/bundle.js",
+        filename: "bundle.js",
     },
     plugins: [
         ...pages,
         new MiniCssExtractPlugin(),
-        new HTMLInlineCSSWebpackPlugin(),
-        new PreloadWebpackPlugin({
-            rel: "preload",
-            include: "allAssets",
-            fileWhitelist: [fontRegex],
-            as(entry) {
-                if (/\.css$/.test(entry)) return "style";
-                if (fontRegex.test(entry)) return "font";
-                if (/\.png$/.test(entry)) return "image";
-                return "script";
-            },
-        }),
+        new Critters({ preloadFonts: true }),
     ],
     devServer: {
         contentBase: `${basePath}/app`,
