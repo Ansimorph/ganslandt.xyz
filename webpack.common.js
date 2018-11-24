@@ -105,7 +105,7 @@ module.exports = {
     plugins: [
         ...pages,
         new MiniCssExtractPlugin(),
-        new Critters({ preloadFonts: true }),
+        new Critters({ preloadFonts: true, compress: false }),
     ],
     devServer: {
         contentBase: `${basePath}/app`,
