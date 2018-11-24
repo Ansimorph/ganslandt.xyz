@@ -15,6 +15,9 @@ module.exports = merge.strategy({
     mode: "development",
     devtool: "inline-source-map",
     devServer: {
-        contentBase: "./dist",
+        contentBase: `/dist`,
+        hot: true,
+        open: true,
+        watchContentBase: true,
     },
 });

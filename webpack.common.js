@@ -94,10 +94,4 @@ module.exports = {
         filename: "bundle.js",
     },
     plugins: [...pages],
-    devServer: {
-        contentBase: `${basePath}/app`,
-        hot: true,
-        open: true,
-        watchContentBase: true,
-    },
 };
