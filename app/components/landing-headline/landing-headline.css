@@ -5,7 +5,7 @@
     line-height: 9base;
     color: var(--white);
     font-weight: 700;
-    font-family: Canela, Georgia, serif;
+    font-family: Canela, Cambria, Georgia, Times, "Times New Roman", serif;
 }
 
 .landing-headline__select {
