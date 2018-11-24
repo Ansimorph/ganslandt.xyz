@@ -26,6 +26,7 @@
         "eslint-config-prettier": "^3.0.1",
         "eslint-loader": "^2.1.0",
         "eslint-plugin-import": "^2.14.0",
+        "favicons-webpack-plugin": "^0.0.9",
         "file-loader": "^2.0.0",
         "glob": "^7.1.2",
         "html-loader": "^0.5.1",

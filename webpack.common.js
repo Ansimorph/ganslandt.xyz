@@ -1,6 +1,7 @@
 const path = require("path");
 const glob = require("glob");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 require("dotenv").config();
 
@@ -93,5 +94,23 @@ module.exports = {
         path: `${basePath}/dist`,
         filename: "bundle.js",
     },
-    plugins: [...pages],
+    plugins: [
+        ...pages,
+        new FaviconsWebpackPlugin({
+            logo: "./app/assets/images/favicon.png",
+            persistentCache: true,
+            icons: {
+                android: true,
+                appleIcon: true,
+                appleStartup: false,
+                coast: false,
+                favicons: true,
+                firefox: false,
+                opengraph: true,
+                twitter: false,
+                yandex: false,
+                windows: false,
+            },
+        }),
+    ],
 };
