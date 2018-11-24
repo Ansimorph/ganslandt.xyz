@@ -1,8 +1,6 @@
 const path = require("path");
 const glob = require("glob");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const Critters = require("critters-webpack-plugin");
 
 require("dotenv").config();
 
@@ -54,11 +52,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "postcss-loader",
-                ],
+                use: ["css-loader", "postcss-loader"],
             },
             {
                 test: /\.(njk|nunjucks)$/,
@@ -96,11 +90,7 @@ module.exports = {
         path: `${basePath}/dist`,
         filename: "bundle.js",
     },
-    plugins: [
-        ...pages,
-        new MiniCssExtractPlugin(),
-        new Critters({ preloadFonts: true, compress: false }),
-    ],
+    plugins: [...pages],
     devServer: {
         contentBase: `${basePath}/app`,
         hot: true,
