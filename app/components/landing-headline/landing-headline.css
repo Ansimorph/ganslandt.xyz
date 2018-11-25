@@ -26,7 +26,7 @@
 }
 
 .landing-headline__select-wrapper {
-    --dropdown-caret-size: 0.8rem;
+    --dropdown-caret-size: 2base;
 
     display: inline-block;
     position: relative;
@@ -34,7 +34,7 @@
     text-decoration: underline;
 
     &:focus-within {
-        outline: 1px solid var(--blue);
+        outline: 0.1rem solid var(--blue);
         outline-offset: 0.2rem;
     }
 
