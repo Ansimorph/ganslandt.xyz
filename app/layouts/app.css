@@ -1,12 +1,40 @@
 @import "../variables.css";
 
+/* Rem Base */
+
 html {
     font-size: 62.5%;
 }
 
-body {
-    margin: 0;
+/* Reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/* Utilities */
 
 .visually-hidden {
     /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
