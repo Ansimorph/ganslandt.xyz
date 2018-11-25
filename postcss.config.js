@@ -5,6 +5,7 @@ module.exports = () => ({
         "postcss-nested": {},
         "postcss-custom-units": {},
         "postcss-css-variables": { preserve: false },
+        "postcss-calc": {},
         autoprefixer: {},
     },
 });
