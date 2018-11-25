@@ -48,7 +48,10 @@ module.exports = {
             {
                 test: /\.(njk|nunjucks)$/,
                 loader: [
-                    "html-loader",
+                    {
+                        loader: "html-loader",
+                        options: { attrs: ["img:src", "source:srcset"] },
+                    },
                     {
                         loader: "nunjucks-html-loader",
                         options: nunjucksOptions,
@@ -56,9 +59,8 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(jpe?g|png|svg|gif)$/,
-                loader: "file-loader",
-                options: { name: "[name].[ext]" },
+                test: /\.(jpe?g|png|gif)$/,
+                loader: ["responsive-loader"],
             },
             {
                 test: fontRegex,

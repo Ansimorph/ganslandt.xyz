@@ -4,6 +4,11 @@
 
 {% block content %}
 <main class="container">
+<picture>
+    <source srcset="../assets/images/bjoern.jpg?size=600" media="(min-width: 580px)">
+    <source srcset="../assets/images/bjoern.jpg?size=480" media="(min-width: 400px)">
+    <img src="../assets/images/bjoern.jpg?size=320" alt="Björn Ganslandt">
+</picture>
 {% include "components/landing-headline/landing-headline.html" %}
 </main>
 
