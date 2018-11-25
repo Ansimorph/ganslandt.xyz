@@ -30,7 +30,7 @@
 
     display: inline-block;
     position: relative;
-    padding-right: calc(var(--dropdown-caret-size) * 2 + 0.4rem);
+    padding-right: calc(var(--dropdown-caret-size) * 2 + 1base);
     text-decoration: underline;
 
     &:focus-within {
