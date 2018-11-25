@@ -32,24 +32,14 @@ const pages = glob
 
 module.exports = {
     entry: {
-        app: ["./app/landing.js"],
+        app: ["./app/landing.ts"],
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.tsx?$/,
+                use: "ts-loader",
                 exclude: /node_modules/,
-                loader: "eslint-loader",
-                options: {
-                    emitError: true,
-                    emitWarning: true,
-                },
-                enforce: "pre",
-            },
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: "babel-loader",
             },
             {
                 test: /\.css$/,
@@ -93,6 +83,9 @@ module.exports = {
     output: {
         path: `${basePath}/dist`,
         filename: "bundle.js",
+    },
+    resolve: {
+        extensions: [".tsx", ".ts", ".js"],
     },
     plugins: [
         ...pages,
