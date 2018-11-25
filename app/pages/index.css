@@ -10,16 +10,7 @@
     font-display: fallback;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 body {
     background-color: var(--dark-grey);
-    margin: 0;
     color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
 }
