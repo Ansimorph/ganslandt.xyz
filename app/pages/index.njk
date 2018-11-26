@@ -1,21 +1,10 @@
 {% extends "layouts/app.html" %} {% set title = "Björn Ganslandt is a freelance
 frontend web developer" %} {% block content %}
 <main>
-    <picture>
-        <source
-            srcset="../assets/images/bjoern.jpg?size=600"
-            media="(min-width: 400px)"
-        />
-        <source
-            srcset="../assets/images/bjoern.jpg?size=400"
-            media="(min-width: 350px)"
-        />
-        <img
-            class="portrait"
-            src="../assets/images/bjoern.jpg?size=320"
-            alt="Björn Ganslandt"
-        />
-    </picture>
+    <img
+        src="${require('../assets/images/bjoern.jpg?size=320')}"
+        srcset="${require('../assets/images/bjoern.jpg?min=320,max=600').srcSet}"
+    />
     <div class="container">
         {% include "components/landing-headline/landing-headline.html" %}
     </div>

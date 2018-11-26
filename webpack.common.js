@@ -50,7 +50,10 @@ module.exports = {
                 loader: [
                     {
                         loader: "html-loader",
-                        options: { attrs: ["img:src", "source:srcset"] },
+                        options: {
+                            attrs: ["img:src", "source:srcset"],
+                            interpolate: true,
+                        },
                     },
                     {
                         loader: "nunjucks-html-loader",
