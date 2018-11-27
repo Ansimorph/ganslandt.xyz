@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 require("dotenv").config();
-const stripDirs = require("strip-dirs");
 
 const basePath = process.cwd();
 const fontRegex = /\.(woff|woff2|eot|ttf|otf)$/;
@@ -22,7 +21,6 @@ const pages = glob
                 title: `Björn Ganslandt is a freelance
                 frontend web developer`,
                 template: "app/layouts/app.ejs",
-                path: path.resolve(__dirname, "./dist"),
                 minify: {
                     removeComments: true,
                     collapseWhitespace: true,
@@ -44,7 +42,13 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ["css-loader", "postcss-loader"],
+                use: [
+                    {
+                        loader: "css-loader/locals",
+                        options: { modules: true },
+                    },
+                    "postcss-loader",
+                ],
             },
             {
                 test: /\.(jpe?g|png|gif)$/,
