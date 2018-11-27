@@ -1,4 +1,5 @@
 const responsiveImage = require("../../assets/images/bjoern.jpg?min=320,max=600");
+
 import landingHeadline from "../../components/landing-headline/landing-headline";
 import socialMediaIcons from "../../components/social-media-icons/social-media-icons";
 

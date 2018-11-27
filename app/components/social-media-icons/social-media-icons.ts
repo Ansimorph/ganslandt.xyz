@@ -1,6 +1,6 @@
-import iconCodepen from "../../assets/images/icon-codepen.svg";
-import iconGithub from "../../assets/images/icon-github.svg";
-import iconTwitter from "../../assets/images/icon-twitter.svg";
+const iconCodepen = require("../../assets/images/icon-codepen.svg");
+const iconGithub = require("../../assets/images/icon-github.svg");
+const iconTwitter = require("../../assets/images/icon-twitter.svg");
 
 export default /*html*/ `
 <ul class="social-media-icons">
