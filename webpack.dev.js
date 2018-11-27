@@ -4,14 +4,14 @@ const common = require("./webpack.common.js");
 module.exports = merge.strategy({
     "module.rules": "prepend",
 })(common, {
-    // module: {
-    //     rules: [
-    //         {
-    //             test: /\.css$/,
-    //             use: ["isomorphic-style-loader"],
-    //         },
-    //     ],
-    // },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ["style-loader"],
+            },
+        ],
+    },
     mode: "development",
     devtool: "inline-source-map",
     devServer: {

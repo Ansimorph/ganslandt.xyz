@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 require("dotenv").config();
+const stripDirs = require("strip-dirs");
 
 const basePath = process.cwd();
 const fontRegex = /\.(woff|woff2|eot|ttf|otf)$/;
@@ -42,13 +43,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: "css-loader/locals",
-                        options: { modules: true },
-                    },
-                    "postcss-loader",
-                ],
+                use: ["css-loader", "postcss-loader"],
             },
             {
                 test: /\.(jpe?g|png|gif)$/,

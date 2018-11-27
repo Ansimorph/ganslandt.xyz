@@ -8,6 +8,14 @@ const common = require("./webpack.common.js");
 module.exports = merge.strategy({
     "module.rules": "prepend",
 })(common, {
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader],
+            },
+        ],
+    },
     mode: "production",
     plugins: [
         new CleanWebpackPlugin(["dist"]),

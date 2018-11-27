@@ -1,3 +1,7 @@
+const iconCodepen = require("../../assets/images/icon-codepen.svg");
+const iconGithub = require("../../assets/images/icon-github.svg");
+const iconTwitter = require("../../assets/images/icon-twitter.svg");
+
 const page = /*html*/ `
 <ul class="social-media-icons">
     <li>
@@ -5,7 +9,7 @@ const page = /*html*/ `
             href="https://codepen.io/Ansimorph/"
             class="social-media-icons__icon"
         >
-            ${require("../../assets/images/icon-codepen.svg")}
+            ${iconCodepen}
         </a>
     </li>
     <li>
@@ -13,7 +17,7 @@ const page = /*html*/ `
             href="https://github.com/Ansimorph/"
             class="social-media-icons__icon"
         >
-            ${require("../../assets/images/icon-github.svg")}
+            ${iconGithub}
         </a>
     </li>
     <li>
@@ -21,7 +25,7 @@ const page = /*html*/ `
             href="https://twitter.com/Ansimorph/"
             class="social-media-icons__icon"
         >
-            ${require("../../assets/images/icon-twitter.svg")}
+            ${iconTwitter}
         </a>
     </li>
 </ul>
