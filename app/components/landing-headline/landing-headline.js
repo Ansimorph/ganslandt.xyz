@@ -1,3 +1,4 @@
+const page = /*html*/ `
 <h1 class="landing-headline">
     Björn Ganslandt is a frontend developer who loves
     <span class="landing-headline__select-wrapper">
@@ -16,3 +17,5 @@
         </select>
     </span>
 </h1>
+`;
+module.exports = page;

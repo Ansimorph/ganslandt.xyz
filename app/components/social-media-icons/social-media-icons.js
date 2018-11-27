@@ -1,10 +1,11 @@
+const page = /*html*/ `
 <ul class="social-media-icons">
     <li>
         <a
             href="https://codepen.io/Ansimorph/"
             class="social-media-icons__icon"
         >
-            ${require('../../assets/images/icon-codepen.svg')}
+            ${require("../../assets/images/icon-codepen.svg")}
         </a>
     </li>
     <li>
@@ -12,7 +13,7 @@
             href="https://github.com/Ansimorph/"
             class="social-media-icons__icon"
         >
-            ${require('../../assets/images/icon-github.svg')}
+            ${require("../../assets/images/icon-github.svg")}
         </a>
     </li>
     <li>
@@ -20,7 +21,10 @@
             href="https://twitter.com/Ansimorph/"
             class="social-media-icons__icon"
         >
-            ${require('../../assets/images/icon-twitter.svg')}
+            ${require("../../assets/images/icon-twitter.svg")}
         </a>
     </li>
 </ul>
+`;
+
+module.exports = page;

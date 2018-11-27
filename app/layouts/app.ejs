@@ -3,8 +3,11 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>{{ title }}</title>
-        <meta name="description" content="{{ title }}" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <meta
+            name="description"
+            content="<%= htmlWebpackPlugin.options.title %>"
+        />
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -13,13 +16,19 @@
         <meta name="theme-color" content="#303333" />
         <meta property="og:url" content="https://www.ganslandt.xyz/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="{{ title }}" />
-        <meta property="og:description" content="{{ title }}" />
+        <meta
+            property="og:title"
+            content="<%= htmlWebpackPlugin.options.title %>"
+        />
+        <meta
+            property="og:description"
+            content="<%= htmlWebpackPlugin.options.title %>"
+        />
         <meta property="og:image" content="" />
         <meta property="og:locale" content="en-US" />
     </head>
 
     <body>
-        {% block content %} {% endblock %}
+        <%= require(`../pages/${htmlWebpackPlugin.options.page}`) %>
     </body>
 </html>

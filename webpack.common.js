@@ -9,20 +9,19 @@ const stripDirs = require("strip-dirs");
 const basePath = process.cwd();
 const fontRegex = /\.(woff|woff2|eot|ttf|otf)$/;
 
-const nunjucksOptions = JSON.stringify({
-    searchPaths: `${basePath}/app/`,
-});
-
 const pages = glob
-    .sync("**/*.njk", {
+    .sync("**/*.js", {
         cwd: path.join(basePath, "app/pages/"),
         root: "/",
     })
     .map(
         page =>
             new HtmlWebpackPlugin({
-                filename: stripDirs(page.replace("njk", "html"), 2),
-                template: `app/pages/${page}`,
+                filename: "index.html",
+                page,
+                title: `Björn Ganslandt is a freelance
+                frontend web developer`,
+                template: "app/layouts/app.ejs",
                 path: path.resolve(__dirname, "./dist"),
                 minify: {
                     removeComments: true,
@@ -46,22 +45,6 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ["css-loader", "postcss-loader"],
-            },
-            {
-                test: /\.(njk|nunjucks)$/,
-                loader: [
-                    {
-                        loader: "html-loader",
-                        options: {
-                            attrs: ["img:src", "source:srcset"],
-                            interpolate: true,
-                        },
-                    },
-                    {
-                        loader: "nunjucks-html-loader",
-                        options: nunjucksOptions,
-                    },
-                ],
             },
             {
                 test: /\.(jpe?g|png|gif)$/,
