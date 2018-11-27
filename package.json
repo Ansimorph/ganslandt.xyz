@@ -11,6 +11,7 @@
         "build": "webpack --colors --config webpack.prod.js"
     },
     "devDependencies": {
+        "@types/images": "^2.2.2",
         "autoprefixer": "^9.1.5",
         "awesome-typescript-loader": "^5.2.1",
         "clean-webpack-plugin": "^1.0.0",
@@ -35,7 +36,6 @@
         "postcss-loader": "^3.0.0",
         "postcss-nested": "^4.1.0",
         "responsive-loader": "^1.1.0",
-        "strip-dirs": "^3.0.0",
         "style-loader": "^0.23.1",
         "stylelint": "^9.0.0",
         "stylelint-config-prettier": "^4.0.0",

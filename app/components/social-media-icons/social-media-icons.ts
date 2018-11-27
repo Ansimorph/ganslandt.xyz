@@ -1,8 +1,8 @@
-const iconCodepen = require("../../assets/images/icon-codepen.svg");
-const iconGithub = require("../../assets/images/icon-github.svg");
-const iconTwitter = require("../../assets/images/icon-twitter.svg");
+import iconCodepen from "../../assets/images/icon-codepen.svg";
+import iconGithub from "../../assets/images/icon-github.svg";
+import iconTwitter from "../../assets/images/icon-twitter.svg";
 
-const page = /*html*/ `
+export default /*html*/ `
 <ul class="social-media-icons">
     <li>
         <a
@@ -30,5 +30,3 @@ const page = /*html*/ `
     </li>
 </ul>
 `;
-
-module.exports = page;

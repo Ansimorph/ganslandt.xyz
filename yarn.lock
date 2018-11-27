@@ -392,6 +392,18 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
+"@types/images@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@types/images/-/images-2.2.2.tgz#278a80f47e7e1bd11427e2e84f2b3939b7392219"
+  integrity sha512-TP5WPNKTnIjnnkhA9oTw6cMA7BdDZoNCp0iZcdtGVVRGW1vxnE1Fc8jHHOOvt7d4ki3Iq1T73v9q7p2GghpeFw==
+  dependencies:
+    "@types/node" "*"
+
+"@types/node@*":
+  version "10.12.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.10.tgz#4fa76e6598b7de3f0cb6ec3abacc4f59e5b3a2ce"
+  integrity sha512-8xZEYckCbUVgK8Eg7lf5Iy4COKJ5uXlnIOnePN0WUwSQggy9tolM+tDJf7wMOnT/JT/W9xDYIaYggt3mRV2O5w==
+
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.7.11.tgz#b988582cafbb2b095e8b556526f30c90d057cace"

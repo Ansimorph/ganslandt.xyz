@@ -1,8 +1,8 @@
 const responsiveImage = require("../../assets/images/bjoern.jpg?min=320,max=600");
-const landingHeadline = require("../../components/landing-headline/landing-headline.js");
-const socialMediaIcons = require("../../components/social-media-icons/social-media-icons.js");
+import landingHeadline from "../../components/landing-headline/landing-headline";
+import socialMediaIcons from "../../components/social-media-icons/social-media-icons";
 
-const page = /*html*/ `
+export default /*html*/ `
 <main>
     <img
         src="${responsiveImage.src}"
@@ -14,5 +14,3 @@ const page = /*html*/ `
     </div>
 </main>
 `;
-
-module.exports = page;

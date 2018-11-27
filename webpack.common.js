@@ -4,13 +4,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 require("dotenv").config();
-const stripDirs = require("strip-dirs");
 
 const basePath = process.cwd();
 const fontRegex = /\.(woff|woff2|eot|ttf|otf)$/;
 
 const pages = glob
-    .sync("**/*.js", {
+    .sync("**/*.ts", {
         cwd: path.join(basePath, "app/pages/"),
         root: "/",
     })

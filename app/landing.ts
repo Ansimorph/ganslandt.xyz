@@ -3,7 +3,7 @@ import "./pages/index/index.css";
 
 import "./components/landing-headline/landing-headline.css";
 
-import LandingHeadlineLogic from "./components/landing-headline/landing-headline";
+import LandingHeadlineLogic from "./components/landing-headline/landing-headline-logic";
 const landingHeadline = new LandingHeadlineLogic();
 landingHeadline.run();
 
