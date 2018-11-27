@@ -35,14 +35,18 @@
         "postcss-loader": "^3.0.0",
         "postcss-nested": "^4.1.0",
         "responsive-loader": "^1.1.0",
+        "strip-dirs": "^3.0.0",
         "style-loader": "^0.23.1",
         "stylelint": "^9.0.0",
         "stylelint-config-prettier": "^4.0.0",
         "stylelint-config-standard": "^18.0.0",
+        "svg-inline-loader": "^0.8.0",
+        "svgo": "^1.1.1",
         "typescript": "^3.1.6",
         "webpack": "^4.0.0",
         "webpack-cli": "^3.1.0",
         "webpack-dev-server": "^3.0.0",
         "webpack-merge": "^4.1.4"
-    }
+    },
+    "dependencies": {}
 }

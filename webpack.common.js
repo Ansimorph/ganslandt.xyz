@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 require("dotenv").config();
+const stripDirs = require("strip-dirs");
 
 const basePath = process.cwd();
 const fontRegex = /\.(woff|woff2|eot|ttf|otf)$/;
@@ -20,8 +21,9 @@ const pages = glob
     .map(
         page =>
             new HtmlWebpackPlugin({
-                filename: page.replace("njk", "html"),
+                filename: stripDirs(page.replace("njk", "html"), 2),
                 template: `app/pages/${page}`,
+                path: path.resolve(__dirname, "./dist"),
                 minify: {
                     removeComments: true,
                     collapseWhitespace: true,
@@ -64,6 +66,10 @@ module.exports = {
             {
                 test: /\.(jpe?g|png|gif)$/,
                 loader: ["responsive-loader"],
+            },
+            {
+                test: /\.(svg)$/,
+                loader: ["svg-inline-loader"],
             },
             {
                 test: fontRegex,

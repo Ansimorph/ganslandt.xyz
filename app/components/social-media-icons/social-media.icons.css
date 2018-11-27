@@ -1,0 +1,17 @@
+@import "../../variables.css";
+
+.social-media-icons {
+    display: flex;
+}
+
+.social-media-icons__icon {
+    fill: var(--white);
+
+    &:hover {
+        fill: var(--blue);
+    }
+
+    svg {
+        width: 8base;
+    }
+}
