@@ -1,12 +1,17 @@
 @import "../../variables.css";
 
 .landing-headline {
-    font-size: 8base;
-    line-height: 10base;
+    font-size: 6base;
+    line-height: 8base;
     color: var(--white);
     font-weight: 700;
     font-family: Canela, Cambria, Georgia, Times, "Times New Roman", serif;
     text-align: center;
+
+    @media (min-width: 400px) {
+        font-size: 8base;
+        line-height: 10base;
+    }
 }
 
 .landing-headline__select {

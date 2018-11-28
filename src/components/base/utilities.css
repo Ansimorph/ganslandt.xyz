@@ -7,8 +7,20 @@
     clip: rect(1px, 1px, 1px, 1px);
 }
 
+.space-6base {
+    margin-bottom: 6base;
+}
+
 .space-8base {
     margin-bottom: 8base;
+}
+
+.space-10base {
+    margin-bottom: 10base;
+}
+
+.space-12base {
+    margin-bottom: 10base;
 }
 
 .container {
