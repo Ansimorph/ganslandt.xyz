@@ -8,3 +8,4 @@ const landingHeadline = new LandingHeadlineLogic();
 landingHeadline.run();
 
 import "./components/social-media-icons/social-media.icons.css";
+import "./components/button-link/button-link.css";

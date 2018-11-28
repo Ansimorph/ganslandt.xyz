@@ -1,0 +1,12 @@
+@import "../../variables.css";
+
+.button-link {
+    font-size: 6base;
+    font-family: sans-serif;
+    line-height: 1;
+    padding: 3base;
+    background-color: var(--blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 0.5base;
+}
