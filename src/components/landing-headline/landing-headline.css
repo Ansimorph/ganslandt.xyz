@@ -9,7 +9,7 @@
     font-family: Canela, Cambria, Georgia, Times, "Times New Roman", serif;
     text-align: center;
 
-    @media (min-width: 400px) {
+    @mixin tablet {
         font-size: 8base;
         line-height: 10base;
     }

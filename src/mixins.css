@@ -4,3 +4,9 @@
     outline: 0.1rem solid var(--blue);
     outline-offset: 0.2rem;
 }
+
+@define-mixin tablet {
+    @media (min-width: 47em) {
+        @mixin-content;
+    }
+}
