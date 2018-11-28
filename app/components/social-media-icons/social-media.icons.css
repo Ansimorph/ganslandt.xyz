@@ -5,13 +5,16 @@
 }
 
 .social-media-icons__icon {
-    fill: var(--white);
-
-    &:hover {
-        fill: var(--blue);
+    &:not(:last-child) {
+        margin-right: 6base;
     }
 
     svg {
+        fill: var(--white);
         width: 8base;
+
+        &:hover {
+            fill: var(--blue);
+        }
     }
 }

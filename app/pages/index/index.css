@@ -19,3 +19,9 @@ body {
 .portrait {
     width: 100%;
 }
+
+.title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

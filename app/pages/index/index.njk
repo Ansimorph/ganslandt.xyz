@@ -5,8 +5,11 @@ frontend web developer" %} {% block content %}
         src="${require('../../assets/images/bjoern.jpg?size=320')}"
         srcset="${require('../../assets/images/bjoern.jpg?min=320,max=600').srcSet}"
     />
-    <div class="container">
-        {% include "components/landing-headline/landing-headline.html" %}
+    <div class="container title-box">
+        <div class="space-8base">
+            {% include "components/landing-headline/landing-headline.html" %}
+        </div>
+
         {% include "components/social-media-icons/social-media-icons.html" %}
     </div>
 </main>
