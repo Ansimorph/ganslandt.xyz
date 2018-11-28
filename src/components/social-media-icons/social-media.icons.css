@@ -9,6 +9,10 @@
         margin-right: 6base;
     }
 
+    a:focus {
+        @mixin focus-style;
+    }
+
     svg {
         fill: var(--white);
         width: 8base;

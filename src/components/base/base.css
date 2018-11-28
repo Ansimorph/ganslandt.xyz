@@ -1,4 +1,5 @@
 @import "../../variables.css";
 
+@import "./mixins.css";
 @import "./reset.css";
 @import "./utilities.css";

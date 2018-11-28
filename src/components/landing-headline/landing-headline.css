@@ -40,8 +40,7 @@
     text-decoration: underline;
 
     &:focus-within {
-        outline: 0.1rem solid var(--blue);
-        outline-offset: 0.2rem;
+        @mixin focus-style;
     }
 
     &:hover {

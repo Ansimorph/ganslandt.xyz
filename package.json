@@ -34,6 +34,7 @@
         "postcss-custom-units": "^0.1.1",
         "postcss-import": "^12.0.0",
         "postcss-loader": "^3.0.0",
+        "postcss-mixins": "^6.2.0",
         "postcss-nested": "^4.1.0",
         "postcss-round-float": "^1.0.0",
         "responsive-loader": "^1.1.0",

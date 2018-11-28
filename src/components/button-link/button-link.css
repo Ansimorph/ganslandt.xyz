@@ -1,6 +1,7 @@
 @import "../../variables.css";
 
 .button-link {
+    display: block;
     font-size: 6base;
     font-family: sans-serif;
     line-height: 1;
@@ -9,4 +10,9 @@
     color: var(--white);
     text-decoration: none;
     border-radius: 0.5base;
+    transition: all 0.2s ease-in-out;
+
+    &:focus {
+        @mixin focus-style;
+    }
 }
