@@ -1,4 +1,4 @@
-import "./layouts/app.css";
+import "./components/base/base.css";
 import "./pages/index/index.css";
 
 import "./components/landing-headline/landing-headline.css";

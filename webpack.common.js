@@ -9,19 +9,15 @@ const stripDirs = require("strip-dirs");
 const basePath = process.cwd();
 const fontRegex = /\.(woff|woff2|eot|ttf|otf)$/;
 
-const nunjucksOptions = JSON.stringify({
-    searchPaths: `${basePath}/app/`,
-});
-
 const pages = glob
-    .sync("**/*.njk", {
+    .sync("**/*.handlebars", {
         cwd: path.join(basePath, "app/pages/"),
         root: "/",
     })
     .map(
         page =>
             new HtmlWebpackPlugin({
-                filename: stripDirs(page.replace("njk", "html"), 2),
+                filename: stripDirs(page.replace("handlebars", "html"), 2),
                 template: `app/pages/${page}`,
                 path: path.resolve(__dirname, "./dist"),
                 minify: {
@@ -31,6 +27,11 @@ const pages = glob
                 },
             }),
     );
+
+const partialDirs = glob.sync("**/", {
+    cwd: path.resolve(__dirname, "app", "components"),
+    realpath: true,
+});
 
 module.exports = {
     entry: {
@@ -48,19 +49,17 @@ module.exports = {
                 use: ["css-loader", "postcss-loader"],
             },
             {
-                test: /\.(njk|nunjucks)$/,
-                loader: [
+                test: /\.handlebars$/,
+                use: [
                     {
-                        loader: "html-loader",
+                        loader: "handlebars-loader",
                         options: {
-                            attrs: ["img:src", "source:srcset"],
-                            interpolate: true,
+                            partialDirs: partialDirs,
+                            helperDirs: path.resolve("app/helpers/"),
+                            inlineRequires: /\/assets\/(:?images|audio|video)\//gi,
                         },
                     },
-                    {
-                        loader: "nunjucks-html-loader",
-                        options: nunjucksOptions,
-                    },
+                    "markup-inline-loader",
                 ],
             },
             {
@@ -69,7 +68,7 @@ module.exports = {
             },
             {
                 test: /\.(svg)$/,
-                loader: ["svg-inline-loader"],
+                loader: ["file-loader"],
             },
             {
                 test: fontRegex,
@@ -97,6 +96,9 @@ module.exports = {
     },
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
+        alias: {
+            handlebars: "handlebars/dist/handlebars.js",
+        },
     },
     plugins: [
         ...pages,
