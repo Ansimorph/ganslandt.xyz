@@ -1,4 +1,5 @@
 @import "../../variables.css";
+@import "../../mixins.css";
 
 .landing-headline {
     font-size: 6base;

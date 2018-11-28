@@ -1,4 +1,4 @@
-@import "../../variables.css";
+@import "./variables.css";
 
 @define-mixin focus-style {
     outline: 0.1rem solid var(--blue);

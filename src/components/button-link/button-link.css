@@ -1,4 +1,5 @@
 @import "../../variables.css";
+@import "../../mixins.css";
 
 .button-link {
     display: block;

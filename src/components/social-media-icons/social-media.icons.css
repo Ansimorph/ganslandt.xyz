@@ -1,4 +1,5 @@
 @import "../../variables.css";
+@import "../../mixins.css";
 
 .social-media-icons {
     display: flex;
