@@ -1,5 +1,6 @@
 const merge = require("webpack-merge");
 const common = require("./webpack.common.js");
+const webpack = require("webpack");
 
 module.exports = merge.strategy({
     "module.rules": "prepend",
@@ -19,5 +20,8 @@ module.exports = merge.strategy({
         hot: true,
         open: true,
         watchContentBase: true,
+        host: "0.0.0.0",
+        inline: true,
     },
+    plugins: [new webpack.HotModuleReplacementPlugin()],
 });
