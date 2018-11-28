@@ -16,12 +16,28 @@ body {
     color: var(--white);
 }
 
-.portrait {
-    width: 100%;
+.hero {
+    @mixin tablet {
+        display: flex;
+        align-items: center;
+    }
 }
 
-.title-box {
+.hero__image,
+.hero__text {
+    @mixin tablet {
+        width: 50%;
+    }
+}
+
+.hero__text {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+
+    @mixin tablet {
+        align-items: flex-start;
+        text-align: left;
+    }
 }

@@ -7,7 +7,6 @@
     color: var(--white);
     font-weight: 700;
     font-family: Canela, Cambria, Georgia, Times, "Times New Roman", serif;
-    text-align: center;
 
     @mixin tablet {
         font-size: 8base;
