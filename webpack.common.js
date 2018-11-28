@@ -8,6 +8,7 @@ const stripDirs = require("strip-dirs");
 
 const basePath = process.cwd();
 const srcPath = "src";
+const outputPath = "dist";
 const fontRegex = /\.(woff|woff2|eot|ttf|otf)$/;
 
 const pages = glob
@@ -20,7 +21,7 @@ const pages = glob
             new HtmlWebpackPlugin({
                 filename: stripDirs(page.replace("handlebars", "html"), 2),
                 template: `${srcPath}/pages/${page}`,
-                path: path.resolve(__dirname, "./dist"),
+                path: path.resolve(__dirname, outputPath),
                 minify: {
                     removeComments: true,
                     collapseWhitespace: true,
@@ -92,7 +93,7 @@ module.exports = {
         ],
     },
     output: {
-        path: `${basePath}/dist`,
+        path: `${basePath}/${outputPath}`,
         filename: "bundle.js",
     },
     resolve: {
