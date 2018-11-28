@@ -44,6 +44,10 @@
         outline-offset: 0.2rem;
     }
 
+    &:hover {
+        color: var(--blue);
+    }
+
     &::after {
         pointer-events: none;
         content: "";
