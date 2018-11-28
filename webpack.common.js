@@ -7,18 +7,19 @@ require("dotenv").config();
 const stripDirs = require("strip-dirs");
 
 const basePath = process.cwd();
+const srcPath = "src";
 const fontRegex = /\.(woff|woff2|eot|ttf|otf)$/;
 
 const pages = glob
     .sync("**/*.handlebars", {
-        cwd: path.join(basePath, "app/pages/"),
+        cwd: path.join(basePath, srcPath, "pages/"),
         root: "/",
     })
     .map(
         page =>
             new HtmlWebpackPlugin({
                 filename: stripDirs(page.replace("handlebars", "html"), 2),
-                template: `app/pages/${page}`,
+                template: `${srcPath}/pages/${page}`,
                 path: path.resolve(__dirname, "./dist"),
                 minify: {
                     removeComments: true,
@@ -29,13 +30,13 @@ const pages = glob
     );
 
 const partialDirs = glob.sync("**/", {
-    cwd: path.resolve(__dirname, "app", "components"),
+    cwd: path.resolve(__dirname, srcPath, "components"),
     realpath: true,
 });
 
 module.exports = {
     entry: {
-        app: ["./app/landing.ts"],
+        app: [`./${srcPath}/landing.ts`],
     },
     module: {
         rules: [
@@ -55,7 +56,7 @@ module.exports = {
                         loader: "handlebars-loader",
                         options: {
                             partialDirs: partialDirs,
-                            helperDirs: path.resolve("app/helpers/"),
+                            helperDirs: path.resolve(`${srcPath}/helpers/`),
                             inlineRequires: /\/assets\/(:?images|audio|video)\//gi,
                         },
                     },
@@ -103,7 +104,7 @@ module.exports = {
     plugins: [
         ...pages,
         new FaviconsWebpackPlugin({
-            logo: "./app/assets/images/favicon.png",
+            logo: `./${srcPath}/assets/images/favicon.png`,
             persistentCache: true,
             icons: {
                 android: true,
