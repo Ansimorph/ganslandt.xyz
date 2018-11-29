@@ -2,6 +2,7 @@ const path = require("path");
 const glob = require("glob");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 require("dotenv").config();
 const stripDirs = require("strip-dirs");
@@ -120,5 +121,11 @@ module.exports = {
                 windows: false,
             },
         }),
+        new CopyWebpackPlugin([
+            {
+                from: `./${srcPath}/assets/static/*.*`,
+                flatten: true,
+            },
+        ]),
     ],
 };
