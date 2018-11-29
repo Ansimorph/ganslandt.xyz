@@ -42,14 +42,26 @@ body {
 }
 
 .hero__image {
-    margin-left: -8base;
-    margin-right: -8base;
+    width: 100vw;
     max-width: 130base;
 
     @mixin breakpoint-m {
         width: 60%;
         margin-right: 0;
         max-width: initial;
+    }
+
+    img {
+        display: block;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+
+            /* Preserve aspect ratio even when not loaded */
+            padding-top: calc(100% * 2657 / 3202);
+        }
     }
 }
 
