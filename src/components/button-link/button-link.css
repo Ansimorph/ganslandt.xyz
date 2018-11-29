@@ -16,4 +16,8 @@
     &:focus {
         @mixin focus-style;
     }
+
+    &:hover {
+        background-color: color(var(--blue) lightness(50%));
+    }
 }
