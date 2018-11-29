@@ -2,7 +2,7 @@
 @import "../../mixins.css";
 
 .button-link {
-    display: block;
+    display: inline-block;
     font-size: 6base;
     font-family: Plex-Sans, sans-serif;
     line-height: 0.9;

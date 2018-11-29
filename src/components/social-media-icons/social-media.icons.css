@@ -3,6 +3,11 @@
 
 .social-media-icons {
     display: flex;
+    justify-content: center;
+
+    @mixin breakpoint-m {
+        justify-content: flex-start;
+    }
 }
 
 .social-media-icons__icon {
