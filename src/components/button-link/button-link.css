@@ -4,9 +4,9 @@
 .button-link {
     display: block;
     font-size: 6base;
-    font-family: sans-serif;
+    font-family: Plex-Sans, sans-serif;
     line-height: 1;
-    padding: 3base;
+    padding: 2.5base 5base 3.5base;
     background-color: var(--blue);
     color: var(--white);
     text-decoration: none;

@@ -12,6 +12,17 @@
     font-display: fallback;
 }
 
+@font-face {
+    font-family: "Plex-Sans";
+    src: url("../../assets/fonts/IBMPlexSans-Regular-Latin1.woff2")
+            format("woff2"),
+        url("../../assets/fonts/IBMPlexSans-Regular-Latin1.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: fallback;
+}
+
 body {
     background-color: var(--dark-grey);
     color: var(--white);
