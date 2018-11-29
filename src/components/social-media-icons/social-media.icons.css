@@ -22,6 +22,7 @@
     svg {
         fill: var(--white);
         width: 8base;
+        height: 8base;
 
         &:hover {
             fill: var(--blue);
