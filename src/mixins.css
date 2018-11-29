@@ -5,8 +5,14 @@
     outline-offset: 0.2rem;
 }
 
-@define-mixin tablet {
-    @media (min-width: 47em) {
+@define-mixin breakpoint-m {
+    @media (min-width: 42em) {
+        @mixin-content;
+    }
+}
+
+@define-mixin breakpoint-l {
+    @media (min-width: 60em) {
         @mixin-content;
     }
 }

@@ -23,7 +23,7 @@ body {
     align-items: center;
     margin-top: 4base;
 
-    @mixin tablet {
+    @mixin breakpoint-m {
         margin-top: 15base;
         flex-direction: row;
         align-items: flex-start;
@@ -31,8 +31,14 @@ body {
 }
 
 .hero__image {
-    @mixin tablet {
+    margin-left: -8base;
+    margin-right: -8base;
+    max-width: 130base;
+
+    @mixin breakpoint-m {
         width: 60%;
+        margin-right: 0;
+        max-width: initial;
     }
 }
 
@@ -43,7 +49,7 @@ body {
     text-align: center;
     max-width: 100base;
 
-    @mixin tablet {
+    @mixin breakpoint-m {
         align-items: flex-start;
         text-align: left;
         margin-top: 10base;

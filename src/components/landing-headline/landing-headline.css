@@ -2,13 +2,13 @@
 @import "../../mixins.css";
 
 .landing-headline {
-    font-size: 6base;
-    line-height: 8base;
+    font-size: 7base;
+    line-height: 9base;
     color: var(--white);
     font-weight: 700;
     font-family: Canela, Cambria, Georgia, Times, "Times New Roman", serif;
 
-    @mixin tablet {
+    @mixin breakpoint-l {
         font-size: 8base;
         line-height: 10base;
     }
