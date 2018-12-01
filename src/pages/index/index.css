@@ -43,10 +43,12 @@ body {
 
 .hero__image {
     /* Has fixed aspect ratio to prevent reflow on load */
+    --hero-aspect-ratio: calc(358 / 432);
+
     width: 100vw;
     max-width: 130base;
-    height: calc(100vw * 358 / 432);
-    max-height: calc(130base * 358 / 432);
+    height: calc(100vw * var(--hero-aspect-ratio));
+    max-height: calc(130base * var(--hero-aspect-ratio));
 
     @mixin breakpoint-m {
         width: 60%;
