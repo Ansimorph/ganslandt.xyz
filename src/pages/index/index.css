@@ -42,12 +42,15 @@ body {
 }
 
 .hero__image {
+    /* Has fixed aspect ratio to prevent reflow on load */
     width: 100vw;
     max-width: 130base;
+    height: calc(100vw * 358 / 432);
+    max-height: calc(130base * 358 / 432);
 
     @mixin breakpoint-m {
         width: 60%;
-        margin-right: 0;
+        height: auto;
         max-width: initial;
     }
 }
