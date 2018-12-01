@@ -50,18 +50,6 @@ body {
         margin-right: 0;
         max-width: initial;
     }
-
-    img {
-        display: block;
-
-        &::before {
-            content: "";
-            display: block;
-
-            /* Preserve aspect ratio even when not loaded */
-            padding-top: calc(100% * 2657 / 3202);
-        }
-    }
 }
 
 .hero__text {
