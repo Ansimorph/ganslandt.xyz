@@ -17,6 +17,16 @@ const minifyOptions = {
     conservativeCollapse: true,
 };
 
+function recursiveIssuer(m) {
+    if (m.issuer) {
+        return recursiveIssuer(m.issuer);
+    } else if (m.name) {
+        return m.name;
+    } else {
+        return false;
+    }
+}
+
 const pages = glob
     .sync("**/*.handlebars", {
         cwd: path.join(basePath, srcPath, "pages/"),
@@ -45,7 +55,7 @@ const markdownPages = glob
                 template: `${srcPath}/components/markdown-base/markdown-base.handlebars`,
                 path: path.resolve(__dirname, outputPath),
                 minify: minifyOptions,
-                page: page,
+                page: path.resolve(__dirname, page),
                 chunks: ["content"],
             }),
     );
@@ -59,6 +69,28 @@ module.exports = {
     entry: {
         landing: `./${srcPath}/landing.ts`,
         content: `./${srcPath}/content.ts`,
+    },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                landingStyles: {
+                    name: "landing",
+                    test: (m, c, entry = "landing") =>
+                        m.constructor.name === "CssModule" &&
+                        recursiveIssuer(m) === entry,
+                    chunks: "all",
+                    enforce: true,
+                },
+                contentStyles: {
+                    name: "content",
+                    test: (m, c, entry = "content") =>
+                        m.constructor.name === "CssModule" &&
+                        recursiveIssuer(m) === entry,
+                    chunks: "all",
+                    enforce: true,
+                },
+            },
+        },
     },
     module: {
         rules: [
