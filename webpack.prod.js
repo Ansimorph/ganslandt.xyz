@@ -20,7 +20,7 @@ module.exports = merge.strategy({
     plugins: [
         new CleanWebpackPlugin(["dist"]),
         new MiniCssExtractPlugin(),
-        // new Critters({ preloadFonts: true }),
+        new Critters({ preloadFonts: true }),
     ],
 });
 

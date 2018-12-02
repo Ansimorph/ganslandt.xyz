@@ -45,6 +45,7 @@ const markdownPages = glob
                 template: `${srcPath}/components/markdown-base/markdown-base.handlebars`,
                 path: path.resolve(__dirname, outputPath),
                 minify: minifyOptions,
+                page: page,
                 chunks: ["content"],
             }),
     );
