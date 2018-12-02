@@ -11,6 +11,11 @@ const basePath = process.cwd();
 const srcPath = "src";
 const outputPath = "dist";
 const fontRegex = /\.(woff|woff2|eot|ttf|otf)$/;
+const minifyOptions = {
+    removeComments: true,
+    collapseWhitespace: true,
+    conservativeCollapse: true,
+};
 
 const pages = glob
     .sync("**/*.handlebars", {
@@ -23,11 +28,24 @@ const pages = glob
                 filename: stripDirs(page.replace("handlebars", "html"), 2),
                 template: `${srcPath}/pages/${page}`,
                 path: path.resolve(__dirname, outputPath),
-                minify: {
-                    removeComments: true,
-                    collapseWhitespace: true,
-                    conservativeCollapse: true,
-                },
+                minify: minifyOptions,
+                chunks: ["landing"],
+            }),
+    );
+
+const markdownPages = glob
+    .sync("**/*.md", {
+        cwd: path.join(basePath, srcPath, "pages/"),
+        root: "/",
+    })
+    .map(
+        page =>
+            new HtmlWebpackPlugin({
+                filename: page.replace(/\w*.md$/, "index.html"),
+                // template: `${srcPath}/components/base/base.handlebars`,
+                path: path.resolve(__dirname, outputPath),
+                minify: minifyOptions,
+                chunks: ["content"],
             }),
     );
 
@@ -38,7 +56,8 @@ const partialDirs = glob.sync("**/", {
 
 module.exports = {
     entry: {
-        app: [`./${srcPath}/landing.ts`],
+        landing: `./${srcPath}/landing.ts`,
+        content: `./${srcPath}/content.ts`,
     },
     module: {
         rules: [
@@ -63,6 +82,18 @@ module.exports = {
                         },
                     },
                     "markup-inline-loader",
+                ],
+            },
+            {
+                test: /\.md$/,
+                use: [
+                    {
+                        loader: "html-loader",
+                    },
+                    {
+                        loader: "markdown-loader",
+                        options: {},
+                    },
                 ],
             },
             {
@@ -95,7 +126,6 @@ module.exports = {
     },
     output: {
         path: `${basePath}/${outputPath}`,
-        filename: "bundle.js",
     },
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
@@ -105,6 +135,7 @@ module.exports = {
     },
     plugins: [
         ...pages,
+        ...markdownPages,
         new FaviconsWebpackPlugin({
             logo: `./${srcPath}/assets/images/favicon.png`,
             persistentCache: true,
