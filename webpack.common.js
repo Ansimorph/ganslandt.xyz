@@ -42,7 +42,7 @@ const markdownPages = glob
         page =>
             new HtmlWebpackPlugin({
                 filename: page.replace(/\w*.md$/, "index.html"),
-                // template: `${srcPath}/components/base/base.handlebars`,
+                template: `${srcPath}/components/markdown-base/markdown-base.handlebars`,
                 path: path.resolve(__dirname, outputPath),
                 minify: minifyOptions,
                 chunks: ["content"],
