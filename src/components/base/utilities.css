@@ -25,6 +25,7 @@
 
 .container {
     max-width: 120rem;
-    padding: 0 8base;
+    padding-left: 8base;
+    padding-right: 8base;
     margin: 0 auto;
 }

@@ -1,2 +1,21 @@
 @import "../../variables.css";
 @import "../../mixins.css";
+
+main {
+    font-size: 4base;
+    line-height: 5base;
+    padding-top: 8base;
+    padding-bottom: 8base;
+}
+
+h1,
+h2,
+p {
+    margin-bottom: 4base;
+}
+
+p {
+    & + h2 {
+        margin-top: 8base;
+    }
+}
