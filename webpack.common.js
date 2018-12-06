@@ -3,62 +3,28 @@ const glob = require("glob");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const generateMarkdownPages = require("./generateMarkdownPages");
 
 require("dotenv").config();
-const stripDirs = require("strip-dirs");
 
-const basePath = process.cwd();
-const srcPath = "src";
-const outputPath = "dist";
-const fontRegex = /\.(woff|woff2|eot|ttf|otf)$/;
-const minifyOptions = {
-    removeComments: true,
-    collapseWhitespace: true,
-    conservativeCollapse: true,
+const options = {
+    basePath: process.cwd("../"),
+    srcPath: "src",
+    outputPath: "dist",
+    fontRegex: /\.(woff|woff2|eot|ttf|otf)$/,
 };
 
-const pages = glob
-    .sync("**/*.handlebars", {
-        cwd: path.join(basePath, srcPath, "pages/"),
-        root: "/",
-    })
-    .map(
-        page =>
-            new HtmlWebpackPlugin({
-                filename: stripDirs(page.replace("handlebars", "html"), 2),
-                template: `${srcPath}/pages/${page}`,
-                path: path.resolve(__dirname, outputPath),
-                minify: minifyOptions,
-                chunks: ["landing"],
-            }),
-    );
-
-const markdownPages = glob
-    .sync("**/*.md", {
-        cwd: path.join(basePath, srcPath, "pages/"),
-        root: "/",
-    })
-    .map(
-        page =>
-            new HtmlWebpackPlugin({
-                filename: page.replace(/\w*.md$/, "index.html"),
-                template: `${srcPath}/components/markdown-base/markdown-base.handlebars`,
-                path: path.resolve(__dirname, outputPath),
-                minify: minifyOptions,
-                page: page,
-                chunks: ["content"],
-            }),
-    );
-
+const minifyOptions = require("./htmlminify.config");
+const markdownPages = generateMarkdownPages(options);
 const partialDirs = glob.sync("**/", {
-    cwd: path.resolve(__dirname, srcPath, "components"),
+    cwd: path.resolve(__dirname, options.srcPath, "components"),
     realpath: true,
 });
 
 module.exports = {
     entry: {
-        landing: `./${srcPath}/landing.ts`,
-        content: `./${srcPath}/content.ts`,
+        landing: `./${options.srcPath}/landing.ts`,
+        content: `./${options.srcPath}/content.ts`,
     },
     module: {
         rules: [
@@ -78,7 +44,9 @@ module.exports = {
                         loader: "handlebars-loader",
                         options: {
                             partialDirs: partialDirs,
-                            helperDirs: path.resolve(`${srcPath}/helpers/`),
+                            helperDirs: path.resolve(
+                                `${options.srcPath}/helpers/`,
+                            ),
                             inlineRequires: /\/assets\/(:?images|audio|video)\//gi,
                         },
                     },
@@ -106,7 +74,7 @@ module.exports = {
                 loader: ["file-loader"],
             },
             {
-                test: fontRegex,
+                test: options.fontRegex,
                 loader: "file-loader",
                 options: { name: "[name].[ext]" },
             },
@@ -126,7 +94,7 @@ module.exports = {
         ],
     },
     output: {
-        path: `${basePath}/${outputPath}`,
+        path: `${options.basePath}/${options.outputPath}`,
     },
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
@@ -135,10 +103,16 @@ module.exports = {
         },
     },
     plugins: [
-        ...pages,
         ...markdownPages,
+        new HtmlWebpackPlugin({
+            filename: "index.html",
+            template: `${options.srcPath}/pages/index/index.handlebars`,
+            path: path.resolve(__dirname, options.outputPath),
+            minify: minifyOptions,
+            chunks: ["landing"],
+        }),
         new FaviconsWebpackPlugin({
-            logo: `./${srcPath}/assets/images/favicon.png`,
+            logo: `./${options.srcPath}/assets/images/favicon.png`,
             persistentCache: true,
             icons: {
                 android: true,
@@ -155,7 +129,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             {
-                from: `./${srcPath}/assets/static/*.*`,
+                from: `./${options.srcPath}/assets/static/*.*`,
                 flatten: true,
             },
         ]),
