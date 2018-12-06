@@ -6,6 +6,7 @@ main {
     line-height: 5base;
     padding-top: 8base;
     padding-bottom: 8base;
+    max-width: 60ch;
 }
 
 h1,
