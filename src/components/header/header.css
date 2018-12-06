@@ -1,0 +1,12 @@
+@import "../../variables.css";
+@import "../../mixins.css";
+
+.header {
+    background-color: var(--dark-grey);
+}
+
+.header__title {
+    font-size: 7base;
+    font-weight: 700;
+    font-family: Canela, Cambria, Georgia, Times, "Times New Roman", serif;
+}

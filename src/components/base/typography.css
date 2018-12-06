@@ -1,0 +1,26 @@
+@import "../../variables.css";
+@import "../../mixins.css";
+
+@font-face {
+    font-family: "Canela";
+    src: url("../../assets/fonts/CanelaDeck-Bold-Web.woff2.cast5")
+            format("woff2"),
+        url("../../assets/fonts/CanelaDeck-Bold-Web.woff.cast5") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+h1 {
+    font-size: 7base;
+    line-height: 9base;
+    color: var(--white);
+    font-weight: 700;
+    font-family: Canela, Cambria, Georgia, Times, "Times New Roman", serif;
+
+    @mixin breakpoint-l {
+        font-size: 8base;
+        line-height: 10base;
+    }
+}
