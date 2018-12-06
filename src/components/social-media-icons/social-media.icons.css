@@ -15,17 +15,9 @@
         margin-right: 6base;
     }
 
-    a:focus {
-        @mixin focus-style;
-    }
-
     svg {
-        fill: var(--white);
+        fill: currentColor;
         width: 8base;
         height: 8base;
-
-        &:hover {
-            fill: var(--blue);
-        }
     }
 }

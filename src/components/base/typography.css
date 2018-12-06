@@ -24,3 +24,15 @@ h1 {
         line-height: 10base;
     }
 }
+
+a {
+    color: var(--white);
+
+    &:hover {
+        color: var(--blue);
+    }
+
+    &:focus {
+        @mixin focus-style;
+    }
+}
