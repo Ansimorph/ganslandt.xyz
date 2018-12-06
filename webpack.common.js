@@ -9,6 +9,7 @@ require("dotenv").config();
 
 const options = {
     basePath: process.cwd("../"),
+    baseTitle: "Björn Ganslandt is a freelance frontend web developer",
     srcPath: "src",
     outputPath: "dist",
     fontRegex: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -106,6 +107,7 @@ module.exports = {
         ...markdownPages,
         new HtmlWebpackPlugin({
             filename: "index.html",
+            title: options.baseTitle,
             template: `${options.srcPath}/pages/index/index.handlebars`,
             path: path.resolve(__dirname, options.outputPath),
             minify: minifyOptions,
