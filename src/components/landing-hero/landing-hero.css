@@ -1,0 +1,42 @@
+@import "../../variables.css";
+@import "../../mixins.css";
+
+.landing-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4base;
+
+    @mixin breakpoint-m {
+        margin-top: 15base;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.landing-hero__image {
+    /* Has fixed aspect ratio to prevent reflow on load */
+    --hero-aspect-ratio: calc(358 / 432);
+
+    width: 100vw;
+    max-width: 130base;
+    height: calc(100vw * var(--hero-aspect-ratio));
+    max-height: calc(130base * var(--hero-aspect-ratio));
+
+    @mixin breakpoint-m {
+        width: 60%;
+        height: auto;
+        max-width: initial;
+    }
+}
+
+.landing-hero__text {
+    text-align: center;
+    max-width: 100base;
+
+    @mixin breakpoint-m {
+        text-align: left;
+        margin-top: 10base;
+        width: 40%;
+    }
+}

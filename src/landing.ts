@@ -2,6 +2,7 @@ import "./components/base/base.css";
 import "./pages/index/index.css";
 
 import "./components/landing-headline/landing-headline.css";
+import "./components/landing-hero/landing-hero.css";
 
 import LandingHeadlineLogic from "./components/landing-headline/landing-headline";
 const landingHeadline = new LandingHeadlineLogic();

@@ -1,18 +1,5 @@
 {{#> base title="Björn Ganslandt is a freelance frontend web developer"}}
 <main class="container">
-    <div class="hero">
-        <div class="hero__image">
-            <img {{srcSet "bjoern.jpg"}} alt="Björn Ganslandt" />
-        </div>
-        <div class="hero__text">
-            <div class="space-12base">
-                {{> landing-headline}}
-            </div>
-            <div class="space-12base">
-                {{> button-link text="contact me" href="mailto:hi@ganslandt.xyz"}}
-            </div>
-            {{> social-media-icons}}
-        </div>
-    </div>
+    {{> landing-hero}}
 </main>
 {{/ base }}
