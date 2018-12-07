@@ -8,7 +8,7 @@ const generateMarkdownPages = require("./generateMarkdownPages");
 require("dotenv").config();
 
 const options = {
-    basePath: process.cwd("../"),
+    basePath: process.cwd(),
     baseTitle: "Björn Ganslandt is a freelance frontend web developer",
     srcPath: "src",
     outputPath: "dist",
