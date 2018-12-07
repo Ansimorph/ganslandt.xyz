@@ -54,3 +54,8 @@ a {
         @mixin focus-style;
     }
 }
+
+::selection {
+    background-color: var(--blue);
+    color: var(--white);
+}
