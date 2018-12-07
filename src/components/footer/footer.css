@@ -4,12 +4,13 @@
 .footer {
     display: flex;
     justify-content: center;
-    padding: 4base 0;
+    padding: 20base 0 12base;
     font-family: var(--sans-family);
     font-size: 4base;
 }
 
 .footer__entry {
+    opacity: 0.8;
     display: flex;
 
     &:not(:last-child) {
