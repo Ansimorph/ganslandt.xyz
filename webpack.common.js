@@ -95,6 +95,7 @@ module.exports = {
         ],
     },
     output: {
+        publicPath: "/",
         path: `${options.basePath}/${options.outputPath}`,
     },
     resolve: {

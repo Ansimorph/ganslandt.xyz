@@ -1,9 +1,33 @@
 @import "../../variables.css";
 @import "../../mixins.css";
 
+@font-face {
+    font-family: "Plex-Serif";
+    src: url("../../assets/fonts/IBMPlexSerif-Regular-Latin1.woff2")
+            format("woff2"),
+        url("../../assets/fonts/IBMPlexSerif-Regular-Latin1.woff")
+            format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Plex-Serif";
+    src: url("../../assets/fonts/IBMPlexSerif-Italic-Latin1.woff2")
+            format("woff2"),
+        url("../../assets/fonts/IBMPlexSerif-Italic-Latin1.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
 main {
-    font-size: 4base;
-    line-height: 5base;
+    font-size: 4.5base;
+    font-family: "Plex-Serif", serif;
+    line-height: 7base;
     padding-top: 8base;
     padding-bottom: 8base;
     max-width: 60ch;
@@ -17,6 +41,6 @@ p {
 
 p {
     & + h2 {
-        margin-top: 8base;
+        margin-top: 14base;
     }
 }
