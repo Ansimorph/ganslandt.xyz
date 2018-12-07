@@ -30,12 +30,12 @@ h1 {
 }
 
 h2 {
-    font-size: 6base;
-    line-height: 7base;
+    font-size: 5base;
+    line-height: 6base;
 
     @mixin breakpoint-l {
-        font-size: 7base;
-        line-height: 8base;
+        font-size: 6base;
+        line-height: 7base;
     }
 }
 

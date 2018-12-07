@@ -1,4 +1,4 @@
-## Imprint
+# Imprint & legal information
 
 Björn Ganslandt\
 Dadlergasse 18/6\
@@ -12,7 +12,7 @@ Informationspflicht gemäß\
 §63 Gewerbeordnung und \
 §25 Mediengesetz Offenlegungspflicht:
 
-https://www.wkoecg.at/Web/Ecg.aspx?FirmaID=
+[WKO registry entry](https://www.wkoecg.at/Web/Ecg.aspx?FirmaID=)
 
 ## Privacy
 
