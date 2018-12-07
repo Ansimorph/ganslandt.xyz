@@ -4,7 +4,7 @@
 .button-link {
     display: inline-block;
     font-size: 6base;
-    font-family: Plex-Sans, sans-serif;
+    font-family: var(--sans-family);
     line-height: 1;
     padding: 3base 5base;
     background-color: var(--blue);
