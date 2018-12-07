@@ -36,7 +36,11 @@
 
     @mixin breakpoint-m {
         text-align: left;
-        margin-top: 10base;
+        margin-top: 14base;
         width: 40%;
+    }
+
+    @mixin breakpoint-l {
+        margin-top: 20base;
     }
 }

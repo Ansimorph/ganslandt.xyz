@@ -6,7 +6,7 @@
 }
 
 @define-mixin breakpoint-m {
-    @media (min-width: 42em) {
+    @media (min-width: 45em) {
         @mixin-content;
     }
 }
