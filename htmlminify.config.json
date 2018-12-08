@@ -1,5 +1,7 @@
 {
     "removeComments": true,
     "collapseWhitespace": true,
-    "conservativeCollapse": true
+    "removeAttributeQuotes": true,
+    "collapseBooleanAttributes": true,
+    "removeScriptTypeAttributes": true
 }
