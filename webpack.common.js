@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const generateMarkdownPages = require("./generateMarkdownPages");
+const arrayToSentence = require("array-to-sentence");
 
 require("dotenv").config();
 
@@ -134,7 +135,8 @@ module.exports = {
             template: `${options.srcPath}/pages/index/index.handlebars`,
             path: path.resolve(__dirname, options.outputPath),
             interests: options.interests,
-            description: options.description + options.interests.join(", "),
+            description:
+                options.description + arrayToSentence(options.interests),
             minify: minifyOptions,
             chunks: ["landing"],
         }),
