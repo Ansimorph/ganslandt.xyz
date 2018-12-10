@@ -20,7 +20,7 @@ const options = {
         "HTML",
         "to hear from you",
     ],
-    description: "Björn Ganslandt is a frontend developer who loves: ",
+    description: "Björn Ganslandt is a frontend developer who loves ",
     srcPath: "src",
     outputPath: "dist",
     fontRegex: /\.(woff|woff2|eot|ttf|otf)$/,
