@@ -150,7 +150,7 @@ module.exports = {
                 favicons: true,
                 firefox: false,
                 opengraph: true,
-                twitter: true,
+                twitter: false,
                 yandex: false,
                 windows: false,
             },
