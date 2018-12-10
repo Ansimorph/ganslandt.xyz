@@ -7,6 +7,10 @@
     clip: rect(1px, 1px, 1px, 1px);
 }
 
+.no-select {
+    user-select: none;
+}
+
 .space-6base {
     margin-bottom: 6base;
 }

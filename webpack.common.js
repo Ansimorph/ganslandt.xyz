@@ -9,7 +9,17 @@ require("dotenv").config();
 
 const options = {
     basePath: process.cwd(),
-    baseTitle: "Björn Ganslandt is a freelance frontend web developer",
+    baseTitle: "Björn Ganslandt: freelance frontend web developer",
+    interests: [
+        "design",
+        "CSS",
+        "performance",
+        "design systems",
+        "Vue",
+        "HTML",
+        "to hear from you",
+    ],
+    description: "Björn Ganslandt is a frontend developer who loves: ",
     srcPath: "src",
     outputPath: "dist",
     fontRegex: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -123,12 +133,15 @@ module.exports = {
             title: options.baseTitle,
             template: `${options.srcPath}/pages/index/index.handlebars`,
             path: path.resolve(__dirname, options.outputPath),
+            interests: options.interests,
+            description: options.description + options.interests.join(", "),
             minify: minifyOptions,
             chunks: ["landing"],
         }),
         new FaviconsWebpackPlugin({
             logo: `./${options.srcPath}/assets/images/favicon.png`,
             persistentCache: true,
+            background: "#303333",
             icons: {
                 android: true,
                 appleIcon: true,
@@ -137,7 +150,7 @@ module.exports = {
                 favicons: true,
                 firefox: false,
                 opengraph: true,
-                twitter: false,
+                twitter: true,
                 yandex: false,
                 windows: false,
             },
