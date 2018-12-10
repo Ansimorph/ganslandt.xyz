@@ -11,7 +11,7 @@
     color: var(--white);
     text-decoration: none;
     border-radius: 0.5base;
-    transition: all 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 
     &:focus {
         @mixin focus-style;
@@ -20,5 +20,10 @@
     &:hover {
         color: var(--white);
         background-color: color(var(--blue) lightness(50%));
+    }
+
+    &:active {
+        background-color: color(var(--blue) lightness(40%));
+        outline: 0;
     }
 }

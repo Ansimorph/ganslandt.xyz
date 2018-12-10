@@ -53,6 +53,11 @@ a {
     &:focus {
         @mixin focus-style;
     }
+
+    &:active {
+        outline: 0;
+        color: color(var(--blue) lightness(40%));
+    }
 }
 
 ::selection {
