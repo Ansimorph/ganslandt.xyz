@@ -7,8 +7,8 @@
     "author": "Björn Ganslandt",
     "license": "MIT",
     "scripts": {
-        "serve": "webpack-dev-server --colors --config webpack.dev.js",
-        "build": "webpack --colors --config webpack.prod.js"
+        "serve": "webpack-dev-server --colors --config ./build/webpack.dev.js",
+        "build": "webpack --colors --config ./build/webpack.prod.js"
     },
     "devDependencies": {
         "array-to-sentence": "^2.0.0",

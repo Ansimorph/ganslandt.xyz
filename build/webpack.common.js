@@ -29,7 +29,7 @@ const options = {
 const minifyOptions = require("./htmlminify.config");
 const markdownPages = generateMarkdownPages(options);
 const partialDirs = glob.sync("**/", {
-    cwd: path.resolve(__dirname, options.srcPath, "components"),
+    cwd: path.resolve(options.basePath, options.srcPath, "components"),
     realpath: true,
 });
 
