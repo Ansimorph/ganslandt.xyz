@@ -2151,10 +2151,10 @@ decode-uri-component@^0.2.0:
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
 
-decryption-loader@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/decryption-loader/-/decryption-loader-1.0.0.tgz#079915404c8a2edc4cabe0d48f0b72e0c9b9ff7d"
-  integrity sha512-1VONmUDYGv5v61QucsUkTYCI706/GSjd7ADF3B9fKGOB45CfxhBNYcEZYyzTRWuBDD74f9D2016252fkK5Opvg==
+decryption-loader@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/decryption-loader/-/decryption-loader-1.1.0.tgz#b9b5ed273c7bd1a71cffc322c16fba6cbf78e609"
+  integrity sha512-9AFTCdo3He1ZaqEwwRJwjx1qbE4d2S5f1H2B1+OzmdbcSQJnzOAAFWFKAaO0MDOF7mxDe8Ua9hHyFlm+4xtIEA==
   dependencies:
     loader-utils "^1.1.0"
     schema-utils "^1.0.0"
