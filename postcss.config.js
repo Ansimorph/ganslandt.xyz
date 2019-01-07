@@ -8,6 +8,7 @@ module.exports = () => ({
         "postcss-css-variables": { preserve: false },
         "postcss-color-function": {},
         "postcss-calc": {},
+        "postcss-hexrgba": {},
         "postcss-round-float": {},
         autoprefixer: {},
     },
