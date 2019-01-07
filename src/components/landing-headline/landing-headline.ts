@@ -1,6 +1,6 @@
 export default class LandingHeadline {
-    target: HTMLElement;
-    source: HTMLElement;
+    private target: HTMLElement;
+    private source: HTMLElement;
 
     constructor() {
         this.target = document.querySelector(".js-landing-headline");
