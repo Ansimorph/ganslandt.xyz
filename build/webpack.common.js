@@ -23,7 +23,6 @@ const options = {
     description: "Björn Ganslandt is a frontend developer who loves ",
     srcPath: "src",
     outputPath: "dist",
-    fontRegex: /\.(woff|woff2|eot|ttf|otf)$/,
 };
 
 const minifyOptions = require("./htmlminify.config");
@@ -98,7 +97,7 @@ module.exports = {
                 loader: ["file-loader"],
             },
             {
-                test: options.fontRegex,
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
                 loader: "file-loader",
                 options: { name: "[name].[ext]" },
             },
