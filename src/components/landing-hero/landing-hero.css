@@ -19,6 +19,7 @@
     --hero-aspect-ratio: calc(358 / 432);
 
     position: relative;
+    z-index: -1;
     opacity: 0.9;
     width: 100vw;
     max-width: 130base;
