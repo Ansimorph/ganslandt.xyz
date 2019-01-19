@@ -1,0 +1,24 @@
+html {
+    font-size: 62.5%; /* Rem Base */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*:not(input) {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}

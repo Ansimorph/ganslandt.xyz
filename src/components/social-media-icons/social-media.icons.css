@@ -1,0 +1,23 @@
+@import "../../variables.css";
+@import "../../mixins.css";
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+
+    @mixin breakpoint-m {
+        justify-content: flex-start;
+    }
+}
+
+.social-media-icons__icon {
+    &:not(:last-child) {
+        margin-right: 6base;
+    }
+
+    svg {
+        fill: currentColor;
+        width: 8base;
+        height: 8base;
+    }
+}

@@ -1,0 +1,15 @@
+@import "../../variables.css";
+@import "../../mixins.css";
+
+.header {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    padding: 3base 0;
+}
+
+.header__title {
+    font-size: 7base;
+    font-weight: 700;
+    font-family: var(--headline-family);
+    text-decoration: none;
+}

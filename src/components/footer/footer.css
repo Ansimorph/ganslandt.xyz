@@ -1,0 +1,32 @@
+@import "../../variables.css";
+@import "../../mixins.css";
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 20base 0 12base;
+    font-family: var(--sans-family);
+    font-size: 4base;
+}
+
+.footer__entry {
+    display: flex;
+
+    &:not(:last-child) {
+        &::after {
+            display: block;
+            opacity: 0.5;
+            margin: 0 2base;
+            content: "|";
+        }
+    }
+}
+
+.footer__link {
+    opacity: 0.5;
+    text-decoration: none;
+
+    &:hover {
+        opacity: 1;
+    }
+}

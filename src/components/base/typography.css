@@ -1,0 +1,66 @@
+@import "../../variables.css";
+@import "../../mixins.css";
+
+@font-face {
+    font-family: "Canela";
+    src: url("../../assets/fonts/CanelaDeck-Bold-Web.woff2.cast5")
+            format("woff2"),
+        url("../../assets/fonts/CanelaDeck-Bold-Web.woff.cast5") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    font-family: var(--headline-family);
+}
+
+h1 {
+    font-size: 7base;
+    line-height: 9base;
+
+    @mixin breakpoint-l {
+        font-size: 8base;
+        line-height: 10base;
+    }
+}
+
+h2 {
+    font-size: 5base;
+    line-height: 6base;
+
+    @mixin breakpoint-l {
+        font-size: 6base;
+        line-height: 7base;
+    }
+}
+
+a {
+    color: currentColor;
+
+    &:visited {
+        color: currentColor;
+    }
+
+    &:hover {
+        color: var(--blue);
+    }
+
+    &:focus {
+        @mixin focus-style;
+    }
+
+    &:active {
+        outline: 0;
+        color: color(var(--blue) lightness(40%));
+    }
+}
+
+::selection {
+    background-color: var(--blue);
+    color: var(--white);
+}

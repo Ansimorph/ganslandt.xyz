@@ -1,0 +1,18 @@
+@import "./variables.css";
+
+@define-mixin focus-style {
+    outline: 0.1rem solid var(--blue);
+    outline-offset: 0.2rem;
+}
+
+@define-mixin breakpoint-m {
+    @media (min-width: 45em) {
+        @mixin-content;
+    }
+}
+
+@define-mixin breakpoint-l {
+    @media (min-width: 60em) {
+        @mixin-content;
+    }
+}
