@@ -16,6 +16,7 @@ const options = {
         "CSS",
         "performance",
         "design systems",
+        "typography",
         "Vue",
         "HTML",
         "to hear from you",
