@@ -12,7 +12,7 @@ Informationspflicht gemäß\
 §63 Gewerbeordnung und \
 §25 Mediengesetz Offenlegungspflicht:
 
-[WKO registry entry](https://www.wkoecg.at/Web/Ecg.aspx?FirmaID=)
+[WKO registry entry](https://firmen.wko.at/Web/DetailsKontakt.aspx?FirmaID=125bfdb6-c3a8-48e6-862f-97788f04e584)
 
 ## Privacy
 
