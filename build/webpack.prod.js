@@ -18,7 +18,7 @@ module.exports = merge.strategy({
     },
     mode: "production",
     plugins: [
-        new CleanWebpackPlugin(["dist"]),
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin(),
         new Critters({ preloadFonts: true }),
     ],
