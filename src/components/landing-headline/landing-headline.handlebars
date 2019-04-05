@@ -2,8 +2,7 @@
     Björn Ganslandt is a frontend developer who loves
     <span class="landing-headline-select">
         <span class="js-landing-headline">design</span>
-        <label class="visually-hidden no-select" for="interests">Select interest</label>
-        <select id="interests" class="landing-headline-select__input js-landing-select">
+        <select aria-label="Select interest" id="interests" class="landing-headline-select__input js-landing-select">
             {{#each htmlWebpackPlugin.options.interests}}
             <option>{{this}}</option>
             {{/each}}
