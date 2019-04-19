@@ -18,9 +18,12 @@ body {
     min-height: 100vh;
     background-color: var(--dark-grey);
     color: var(--white);
+    overflow-x: hidden;
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
     width: 100%;
 }

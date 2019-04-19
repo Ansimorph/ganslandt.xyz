@@ -5,6 +5,8 @@
     display: flex;
     justify-content: center;
     padding: 20base 0 12base;
+    background-color: var(--white);
+    color: var(--dark-grey);
     font-family: var(--sans-family);
     font-size: 4base;
 }

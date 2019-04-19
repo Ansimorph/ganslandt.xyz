@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 4base;
+    padding-bottom: 4base;
 
     @mixin breakpoint-m {
         margin-top: 15base;

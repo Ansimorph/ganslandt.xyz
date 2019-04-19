@@ -1,0 +1,26 @@
+@import "../../variables.css";
+@import "../../mixins.css";
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    padding: 4base 0;
+    background-color: var(--white);
+    color: var(--dark-grey);
+}
+
+.articles__headline {
+    display: block;
+    margin-bottom: 4base;
+}
+
+.articles__entry {
+    max-width: 150base;
+    font-size: 4base;
+
+    > h3 {
+        margin-bottom: 2base;
+    }
+}
