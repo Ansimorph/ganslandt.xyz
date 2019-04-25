@@ -4,7 +4,7 @@
 .footer {
     display: flex;
     justify-content: center;
-    padding: 20base 0 12base;
+    padding: 12base 0;
     background-color: var(--white);
     color: var(--dark-grey);
     font-family: var(--sans-family);

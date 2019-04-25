@@ -6,21 +6,26 @@
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
-    padding: 4base 0;
-    background-color: var(--white);
+    padding: 12base 0;
+    background-color: color(var(--dark-grey) lightness(92%));
     color: var(--dark-grey);
 }
 
 .articles__headline {
     display: block;
-    margin-bottom: 4base;
+    margin-bottom: 12base;
+    text-align: center;
 }
 
 .articles__entry {
-    max-width: 150base;
-    font-size: 4base;
+    max-width: 100base;
+    padding: 8base;
+    font-size: 4.5base;
+    line-height: 6base;
+    background-color: var(--white);
+}
 
-    > h3 {
-        margin-bottom: 2base;
-    }
+.articles__title,
+.articles__description {
+    margin-bottom: 5base;
 }
