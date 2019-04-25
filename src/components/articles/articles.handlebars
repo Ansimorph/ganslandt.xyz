@@ -1,10 +1,14 @@
-<div class="articles">
+<section class="articles-section">
     <div class="container">
-        <h2 class="articles__headline">Articles & Slides</h2>
-        <article class="articles__entry">
-            <h3 class="articles__title">Aligning design & development</h3>
-            <p class="articles__description">How improving communication between designers & developers will improve your product.</p>
-            <a class="articles__link" href="#">Read all about it</a>
-        </article>
+        <h2 class="articles-section__headline">Articles & Slides</h2>
+        <div class="articles">
+            {{#each htmlWebpackPlugin.options.articles}}
+            <article class="articles__entry">
+                <h3 class="articles__title">{{this.title}}</h3>
+                <p class="articles__description">{{this.description}}</p>
+                <a class="articles__link" href="{{this.link}}">Read all about it</a>
+            </article>
+            {{/each}}
+        </div>
     </div>
-</div>
+</section>

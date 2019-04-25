@@ -27,6 +27,7 @@ const options = {
 };
 
 const minifyOptions = require("./htmlminify.config");
+const articles = require("../src/data/articles.json");
 const markdownPages = generateMarkdownPages(options);
 const partialDirs = glob.sync("**/", {
     cwd: path.resolve(options.basePath, options.srcPath, "components"),
@@ -135,6 +136,7 @@ module.exports = {
             template: `${options.srcPath}/pages/index/index.handlebars`,
             path: path.resolve(__dirname, options.outputPath),
             interests: options.interests,
+            articles: articles,
             description:
                 options.description + arrayToSentence(options.interests),
             minify: minifyOptions,

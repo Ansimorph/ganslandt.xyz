@@ -1,20 +1,22 @@
 @import "../../variables.css";
 @import "../../mixins.css";
 
-.articles {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: center;
+.articles-section {
     padding: 12base 0;
-    background-color: color(var(--dark-grey) lightness(92%));
     color: var(--dark-grey);
+    background-color: color(var(--dark-grey) lightness(92%));
 }
 
-.articles__headline {
+.articles-section__headline {
     display: block;
     margin-bottom: 12base;
     text-align: center;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20base, 1fr));
+    grid-gap: 8base;
 }
 
 .articles__entry {
