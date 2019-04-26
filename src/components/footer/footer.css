@@ -17,7 +17,7 @@
     &:not(:last-child) {
         &::after {
             display: block;
-            opacity: 0.5;
+            opacity: 0.7;
             margin: 0 2base;
             content: "|";
         }
@@ -25,7 +25,7 @@
 }
 
 .footer__link {
-    opacity: 0.5;
+    opacity: 0.7;
     text-decoration: none;
 
     &:hover {

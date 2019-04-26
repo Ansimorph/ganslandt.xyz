@@ -1,12 +1,16 @@
 <section class="articles-section">
     <div class="container">
-        <h2 class="articles-section__headline">Articles & Slides</h2>
+        <h2 class="articles-section__headline">Articles & Talks</h2>
         <div class="articles">
             {{#each htmlWebpackPlugin.options.articles}}
             <article class="articles__entry">
                 <h3 class="articles__title">{{this.title}}</h3>
                 <p class="articles__description">{{this.description}}</p>
+                {{#if this.slides}}
+                <a class="articles__link" href="{{this.link}}">See the slides</a>
+                {{else}}
                 <a class="articles__link" href="{{this.link}}">Read all about it</a>
+                {{/if}}
             </article>
             {{/each}}
         </div>

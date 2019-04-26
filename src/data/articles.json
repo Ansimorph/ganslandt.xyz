@@ -1,12 +1,26 @@
 [
     {
+        "slides": true,
         "title": "Aligning design & development",
-        "description": "How better communication between designers & developers will improve your product",
+        "description": "How better communication between designers & developers will improve your product.",
         "link": "https://aligning.netlify.com/"
     },
     {
+        "slides": true,
         "title": "Space Jam!",
-        "description": "Writing HTML like it's 1996",
+        "description": "Writing HTML like it's 1996.",
         "link": "http://space-jam-presentation.surge.sh/index.htm"
+    },
+    {
+        "slides": false,
+        "title": "Wenn Pattern Libraries wachsen",
+        "description": "Wie man Verantwortung und Code für Patterns im Unternehmen verteilt.",
+        "link": "https://www.produktbezogen.de/wenn-pattern-libraries-wachsen-verantwortung/"
+    },
+    {
+        "slides": false,
+        "title": "Beyond the grid ",
+        "description": "What’s next for responsive?",
+        "link": "https://medium.com/@Ansimorph/beyond-the-grid-what-s-next-for-responsive-697c6e12fd50"
     }
 ]

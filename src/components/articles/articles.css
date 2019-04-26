@@ -15,15 +15,14 @@
 
 .articles {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80base, max-content));
     grid-gap: 8base;
-    justify-content: center
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(100base, 1fr));
 }
 
 .articles__entry {
     display: flex;
     flex-direction: column;
-    max-width: 100base;
     padding: 8base;
     font-size: 4.5base;
     line-height: 6base;
@@ -33,6 +32,7 @@
 .articles__title,
 .articles__description {
     margin-bottom: 5base;
+    max-width: 150base;
 }
 
 .articles__description {
