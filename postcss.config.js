@@ -9,7 +9,6 @@ module.exports = () => ({
         "postcss-color-function": {},
         "postcss-calc": {},
         "postcss-hexrgba": {},
-        "postcss-round-float": {},
         autoprefixer: {},
     },
 });

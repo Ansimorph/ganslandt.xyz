@@ -42,7 +42,6 @@
         "postcss-loader": "^3.0.0",
         "postcss-mixins": "^6.2.2",
         "postcss-nested": "^4.1.2",
-        "postcss-round-float": "^1.0.0",
         "responsive-loader": "^1.2.0",
         "strip-dirs": "^3.0.0",
         "style-loader": "^1.0.0",
