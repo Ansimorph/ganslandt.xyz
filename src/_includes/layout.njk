@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>{{title}}</title>
+    <style>
+        {{ page.url | getVueComponentCssForPage | safe }}
+    </style>
+    <meta name="description" content="{{interestSentence}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:url" content="https://www.ganslandt.xyz/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:site_name" content="{{title}}" />
+    <meta property="og:description" content="{{interestSentence}}" />
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:image" content="https://ganslandt.xyz/bjoern.jpg" />
+
+    <meta name="theme-color" content="#303333">
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/images/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <link rel="preload" href="/fonts/IBMPlexSans-Regular-Latin1.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/CanelaDeck-Bold-Web.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body>
+    {{ content | safe }}
+</body>
+
+{% set js %}
+    {% include "../js/headline.js" %}
+{% endset %}
+<script>{{ js | babel | safe }}</script>
+
+</html>

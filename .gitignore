@@ -58,7 +58,9 @@ typings/
 .env
 
 # Build resources
+_site/
 dist/
 
-# Typescript Cache
+# Caches
 .awcache
+.cache
