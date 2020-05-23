@@ -8,7 +8,7 @@ The whole build is based on webpack and tries to optimize all assets heavily for
 
 ```bash
   yarn install
-  yarn serve
+  yarn start
 ```
 
 ## Build It
