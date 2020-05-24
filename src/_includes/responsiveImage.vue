@@ -3,13 +3,10 @@
         <source
             type="image/webp"
             :srcset="getSourceSet('webp')"
-            sizes="(min-width: 45em) 50vw, 100vw"
+            :sizes="sizes"
         />
-        <source
-            :srcset="getSourceSet('jpg')"
-            sizes="(min-width: 45em) 50vw, 100vw"
-        />
-        <img :src="'/images/' + baseName + '@540w.jpg'" :alt="alt" />
+        <source :srcset="getSourceSet('jpg')" :sizes="sizes" />
+        <img :src="getFileName(this.smallestSize, 'jpg')" :alt="alt" />
     </picture>
 </template>
 
@@ -69,16 +66,22 @@ export default {
         baseName: function() {
             return this.src.match(/([^\\\/]+)$/)[0].split(".")[0];
         },
+        smallestSize: function() {
+            return Math.min(...this.sizeArray);
+        },
     },
     methods: {
         getSourceSet: function(filetype) {
             let output = "";
             this.sizeArray.forEach(size => {
-                output += `/images/${this.baseName}@${size}w.${filetype} ${size}w,`;
+                output += `${this.getFileName(size, filetype)} ${size}w,`;
             });
             return output;
         },
+        getFileName: function(size, filetype) {
+            return `/images/${this.baseName}@${size}w.${filetype}`;
+        },
     },
-    props: ["src", "alt"],
+    props: ["src", "alt", "sizes"],
 };
 </script>

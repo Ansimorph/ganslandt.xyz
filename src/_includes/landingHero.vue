@@ -5,6 +5,7 @@
                 <responsiveImage
                     src="../../src/assets/images/bjoern.jpg"
                     alt="Björn Ganslandt"
+                    sizes="(min-width: 45em) 50vw, 100vw"
                 ></responsiveImage>
             </div>
             <div class="landing-hero__text">
