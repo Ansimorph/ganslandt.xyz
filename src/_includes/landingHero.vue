@@ -90,6 +90,10 @@ export default {
             var(--dark-grey)
         );
     }
+
+    img {
+        height: auto;
+    }
 }
 
 .landing-hero__text {

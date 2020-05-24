@@ -6,7 +6,12 @@
             :sizes="sizes"
         />
         <source :srcset="getSourceSet('jpg')" :sizes="sizes" />
-        <img :src="getFileName(this.smallestSize, 'jpg')" :alt="alt" />
+        <img
+            :src="getFileName(this.smallestSize, 'jpg')"
+            :alt="alt"
+            :width="imageDimensions.width"
+            :height="imageDimensions.height"
+        />
     </picture>
 </template>
 
@@ -17,6 +22,7 @@ import Vinyl from "vinyl";
 import path from "path";
 import mozJpegPlugin from "imagemin-mozjpeg";
 import webpPlugin from "imagemin-webp";
+import sizeOf from "image-size";
 
 async function generateImages(src, sizeArray, baseName) {
     const filePath = path.join(__dirname, src);
@@ -68,6 +74,9 @@ export default {
         },
         smallestSize: function() {
             return Math.min(...this.sizeArray);
+        },
+        imageDimensions: function() {
+            return sizeOf(path.join(__dirname, this.src));
         },
     },
     methods: {

@@ -27,6 +27,7 @@
         "eleventy-plugin-svg-contents": "^0.7.0",
         "glob": "^7.1.6",
         "html-minifier": "^4.0.0",
+        "image-size": "^0.8.3",
         "node-cipher": "^6.3.3",
         "postcss-calc": "^7.0.1",
         "postcss-color-function": "^4.1.0",
