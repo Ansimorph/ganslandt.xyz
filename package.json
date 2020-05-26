@@ -11,7 +11,8 @@
         "favicons": "favicons src/assets/images/favicon.png -d dist/images",
         "start": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --formats=vue --serve",
         "eleventy-build": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --formats=vue",
-        "build": "yarn eleventy-build && yarn decrypt && yarn favicons"
+        "build": "yarn eleventy-build && yarn decrypt && yarn favicons",
+        "test": "bundlesize"
     },
     "devDependencies": {
         "@11ty/eleventy": "^0.11.0",
@@ -23,6 +24,7 @@
         "array-to-sentence": "^2.0.0",
         "autoprefixer": "^9.7.0",
         "babel-preset-minify": "^0.5.1",
+        "bundlesize": "^0.18.0",
         "dotenv": "^8.2.0",
         "eleventy-plugin-svg-contents": "^0.7.0",
         "glob": "^7.1.6",
@@ -43,5 +45,12 @@
         "stylelint-config-prettier": "^8.0.0",
         "stylelint-config-standard": "^20.0.0"
     },
-    "dependencies": {}
+    "dependencies": {},
+    "bundlesize": [
+        {
+            "path": "./dist/index.html",
+            "maxSize": "14 kB",
+            "compression": "brotli"
+        }
+    ]
 }
