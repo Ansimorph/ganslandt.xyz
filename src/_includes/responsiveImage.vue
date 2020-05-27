@@ -35,6 +35,7 @@ async function generateImages(src, sizeArray, baseName) {
     const optimization = {
         webp: webpPlugin({
             quality: 75,
+            method: 6,
         }),
         jpg: mozJpegPlugin({
             quality: 80,
