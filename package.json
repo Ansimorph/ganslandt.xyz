@@ -11,7 +11,8 @@
         "favicons": "favicons src/assets/images/favicon.png -d dist/images",
         "start": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --formats=vue --serve",
         "eleventy-build": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --formats=vue",
-        "build": "yarn eleventy-build && yarn decrypt && yarn favicons",
+        "build": "yarn eleventy-build && yarn decrypt && yarn favicons && yarn subfont",
+        "subfont": "glyphhanger dist/*.html dist/**/*.html --subset=dist/fonts/*.woff",
         "test": "bundlesize"
     },
     "devDependencies": {
@@ -28,6 +29,7 @@
         "dotenv": "^8.2.0",
         "eleventy-plugin-svg-contents": "^0.7.0",
         "glob": "^7.1.6",
+        "glyphhanger": "^3.2.0",
         "html-minifier": "^4.0.0",
         "image-size": "^0.8.3",
         "node-cipher": "^6.3.3",

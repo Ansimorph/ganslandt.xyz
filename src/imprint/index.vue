@@ -62,8 +62,8 @@ export default {
 
 @font-face {
     font-family: "Plex-Serif";
-    src: url("/fonts/IBMPlexSerif-Regular-Latin1.woff2") format("woff2"),
-        url("/fonts/IBMPlexSerif-Regular-Latin1.woff") format("woff");
+    src: url("/fonts/IBMPlexSerif-Regular-Latin1-subset.woff2") format("woff2"),
+        url("/fonts/IBMPlexSerif-Regular-Latin1-subset.woff") format("woff");
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
@@ -72,8 +72,8 @@ export default {
 
 @font-face {
     font-family: "Plex-Serif";
-    src: url("/fonts/IBMPlexSerif-Italic-Latin1.woff2") format("woff2"),
-        url("/fonts/IBMPlexSerif-Italic-Latin1.woff") format("woff");
+    src: url("/fonts/IBMPlexSerif-Italic-Latin1-subset.woff2") format("woff2"),
+        url("/fonts/IBMPlexSerif-Italic-Latin1-subset.woff") format("woff");
     font-weight: 300;
     font-style: italic;
     font-stretch: normal;

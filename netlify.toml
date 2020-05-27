@@ -18,6 +18,6 @@ ID = "ganslandt.xyz"
   for = "*"
   [headers.values]
     Link = '''
-    </fonts/IBMPlexSans-Regular-Latin1.woff2>; rel=preload; as=font; crossorigin=anonymous,
-    </fonts/CanelaDeck-Bold-Web.woff2>; rel=preload; as=font; crossorigin=anonymous
+    </fonts/IBMPlexSans-Regular-Latin1-subset.woff2>; rel=preload; as=font; crossorigin=anonymous,
+    </fonts/CanelaDeck-Bold-Web-subset.woff2>; rel=preload; as=font; crossorigin=anonymous
     '''
