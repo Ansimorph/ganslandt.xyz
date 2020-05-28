@@ -13,3 +13,11 @@ ID = "ganslandt.xyz"
   from = "/*"
   to = "/index.html"
   status = 301
+
+[[headers]]
+  for = "*"
+  [headers.values]
+    Link = '''
+    </fonts/IBMPlexSans-Regular-Latin1.woff2>; rel=preload; as=font; crossorigin=anonymous,
+    </fonts/CanelaDeck-Bold-Web.woff2>; rel=preload; as=font; crossorigin=anonymous
+    '''
