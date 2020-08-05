@@ -82,11 +82,11 @@ export default {
     },
     methods: {
         getSourceSet: function(filetype) {
-            let output = "";
+            let output = [];
             this.sizeArray.forEach(size => {
-                output += `${this.getFileName(size, filetype)} ${size}w,`;
+                output.push(`${this.getFileName(size, filetype)} ${size}w`);
             });
-            return output;
+            return output.join(',');
         },
         getFileName: function(size, filetype) {
             return `/images/${this.baseName}@${size}w.${filetype}`;

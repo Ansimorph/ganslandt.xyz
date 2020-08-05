@@ -33,11 +33,9 @@
 
 <body>
     {{ content | safe }}
+    {% set js %}
+        {% include "../js/headline.js" %}
+    {% endset %}
+    <script>{{ js | babel | safe }}</script>
 </body>
-
-{% set js %}
-    {% include "../js/headline.js" %}
-{% endset %}
-<script>{{ js | babel | safe }}</script>
-
 </html>
