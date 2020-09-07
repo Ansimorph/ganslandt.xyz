@@ -1,6 +1,11 @@
 <template>
     <picture>
         <source
+            type="image/avif"
+            :srcset="getSourceSet('avif')"
+            :sizes="sizes"
+        />
+        <source
             type="image/webp"
             :srcset="getSourceSet('webp')"
             :sizes="sizes"
