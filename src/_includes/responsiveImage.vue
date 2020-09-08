@@ -16,8 +16,6 @@
             :alt="alt"
             :width="imageDimensions.width"
             :height="imageDimensions.height"
-            loading="lazy"
-            decoding="async"
         />
     </picture>
 </template>
