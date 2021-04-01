@@ -1,0 +1,51 @@
+# Compression
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css text/javascript application/x-javascript application/javascript application/json application/x-font-ttf application/vnd.ms-fontobject image/x-icon
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/css application/x-javascript text/x-component text/html text/plain text/xml application/javascript image/x-icon
+    <IfModule mod_setenvif.c>
+        BrowserMatch ^Mozilla/4 gzip-only-text/html
+        BrowserMatch ^Mozilla/4.0[678] no-gzip
+        BrowserMatch bMSIE !no-gzip !gzip-only-text/html
+    </IfModule>
+</IfModule>
+
+# Caching
+<IfModule mod_expires.c>
+    ExpiresActive on
+    AddType image/avif avif
+    
+    ExpiresByType image/jpg "access plus 60 days"
+    ExpiresByType image/webp "access plus 60 days"
+    ExpiresByType image/avif "access plus 60 days"
+    ExpiresByType image/png "access plus 60 days"
+    ExpiresByType image/gif "access plus 60 days"
+    ExpiresByType image/jpeg "access plus 60 days"
+    ExpiresByType font/woff2 "access plus 60 days"
+    ExpiresByType text/css "access plus 1 days"
+    ExpiresByType image/x-icon "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 week"
+</IfModule>
+
+# Server Push
+<FilesMatch "\index.html$">
+    Header add Link "</fonts/CanelaDeck-Bold-Web-subset.woff2>; rel=preload; as=font; crossorigin=anonymous"
+    Header add Link "</fonts/IBMPlexSans-Regular-Latin1-subset.woff2>; rel=preload; as=font; crossorigin=anonymous"
+</FilesMatch>
+
+#HSTS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+Header set Strict-Transport-Security: "max-age=63072000; includeSubDomains; preload"
+
+# 404
+# RewriteEngine on
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule . / [L,R=301]
+
+ErrorDocument 404 /index.html
+
