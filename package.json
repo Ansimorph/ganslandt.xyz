@@ -12,7 +12,7 @@
         "start": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --formats=vue --serve",
         "eleventy-build": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --formats=vue",
         "build": "yarn eleventy-build && yarn decrypt && yarn favicons && yarn subfont",
-        "subfont": "glyphhanger dist/*.html dist/**/*.html --subset=dist/fonts/*.woff2",
+        "subfont": "glyphhanger dist/*.html dist/**/*.html --formats=woff2 --subset=dist/fonts/*.woff2",
         "test": "bundlesize"
     },
     "devDependencies": {
