@@ -12,7 +12,7 @@
         "start": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --formats=vue --serve",
         "eleventy-build": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --formats=vue",
         "build": "yarn eleventy-build && yarn decrypt && yarn favicons && yarn subfont",
-        "subfont": "glyphhanger dist/*.html dist/**/*.html --subset=dist/fonts/*.woff",
+        "subfont": "glyphhanger dist/*.html dist/**/*.html --subset=dist/fonts/*.woff2",
         "test": "bundlesize"
     },
     "devDependencies": {
@@ -26,13 +26,13 @@
         "autoprefixer": "^9.7.0",
         "babel-preset-minify": "^0.5.1",
         "bundlesize": "^0.18.0",
+        "cryptify": "^4.1.2",
         "dotenv": "^8.2.0",
         "eleventy-plugin-svg-contents": "^0.7.0",
         "glob": "^7.1.6",
         "glyphhanger": "^3.2.0",
         "html-minifier": "^4.0.0",
         "image-size": "^0.8.3",
-        "node-cipher": "^6.3.3",
         "postcss-calc": "^7.0.1",
         "postcss-color-function": "^4.1.0",
         "postcss-css-variables": "^0.13.0",

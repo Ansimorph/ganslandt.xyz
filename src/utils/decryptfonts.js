@@ -1,20 +1,20 @@
-const nodecipher = require("node-cipher");
+const Cryptify = require("cryptify");
 const glob = require("glob");
+const fs = require("fs");
 require("dotenv").config();
 
-const ENCRYPT_FILE_EXTENSION = "cast5";
+const ENCRYPT_FILE_EXTENSION = "enc";
+const password = process.env.PASSWORD;
 
 glob(`dist/**/*.${ENCRYPT_FILE_EXTENSION}`, {}, (er, files) => {
     files.forEach(file => {
-        nodecipher.decrypt(
-            {
-                input: file,
-                output: file.replace(`.${ENCRYPT_FILE_EXTENSION}`, ""),
-                password: process.env.PASSWORD,
-            },
-            function(err) {
-                if (err) throw err;
-            },
-        );
+        const instance = new Cryptify(file, password);
+        instance.decrypt().then(decryptedFile => {
+            fs.rename(
+                file,
+                file.replace("." + ENCRYPT_FILE_EXTENSION, ""),
+                err => {},
+            );
+        });
     });
 });

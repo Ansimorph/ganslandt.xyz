@@ -27,7 +27,8 @@
                 </p>
                 <h2 id="privacy">Privacy</h2>
                 <p>
-                    This page does set cookies or use tracking to analyze your behavior.
+                    This page does set cookies or use tracking to analyze your
+                    behavior.
                 </p>
             </main>
         </div>
@@ -61,8 +62,7 @@ export default {
 
 @font-face {
     font-family: "Plex-Serif";
-    src: url("/fonts/IBMPlexSerif-Regular-Latin1-subset.woff2") format("woff2"),
-        url("/fonts/IBMPlexSerif-Regular-Latin1-subset.woff") format("woff");
+    src: url("/fonts/IBMPlexSerif-Regular-Latin1-subset.woff2") format("woff2");
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
@@ -71,8 +71,7 @@ export default {
 
 @font-face {
     font-family: "Plex-Serif";
-    src: url("/fonts/IBMPlexSerif-Italic-Latin1-subset.woff2") format("woff2"),
-        url("/fonts/IBMPlexSerif-Italic-Latin1-subset.woff") format("woff");
+    src: url("/fonts/IBMPlexSerif-Italic-Latin1-subset.woff2") format("woff2");
     font-weight: 300;
     font-style: italic;
     font-stretch: normal;

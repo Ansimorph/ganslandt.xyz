@@ -39,8 +39,7 @@ export default {
 
 @font-face {
     font-family: "Plex-Sans";
-    src: url("/fonts/IBMPlexSans-Regular-Latin1-subset.woff2") format("woff2"),
-        url("/fonts/IBMPlexSans-Regular-Latin1-subset.woff") format("woff");
+    src: url("/fonts/IBMPlexSans-Regular-Latin1-subset.woff2") format("woff2");
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
