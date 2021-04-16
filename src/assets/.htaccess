@@ -16,7 +16,7 @@ AddOutputFilterByType DEFLATE text/css application/x-javascript text/x-component
 <IfModule mod_expires.c>
     ExpiresActive on
     AddType image/avif avif
-    
+
     ExpiresByType image/jpg "access plus 60 days"
     ExpiresByType image/webp "access plus 60 days"
     ExpiresByType image/avif "access plus 60 days"
@@ -28,6 +28,11 @@ AddOutputFilterByType DEFLATE text/css application/x-javascript text/x-component
     ExpiresByType image/x-icon "access plus 1 month"
     ExpiresByType application/pdf "access plus 1 month"
     ExpiresByType text/javascript "access plus 1 week"
+</IfModule>
+
+# Disable Floc
+<IfModule mod_headers.c>
+  Header always set Permissions-Policy: interest-cohort=()
 </IfModule>
 
 # Server Push
