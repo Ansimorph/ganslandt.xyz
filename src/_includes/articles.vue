@@ -1,7 +1,7 @@
 <template>
     <section class="articles-section">
         <div class="container">
-            <h2 class="articles-section__headline">Words & Code</h2>
+            <h2 class="articles-section__headline">Sideprojects & Articles</h2>
             <div class="articles">
                 <article
                     class="articles__entry"
@@ -30,17 +30,19 @@ export default {
         return {
             articles: [
                 {
+                    slides: false,
+                    title: "Join my workshop in October",
+                    description:
+                        "UX & Developer Collaboration – How to Create Something Great Together",
+                    url:
+                        "https://worldusabilitycongress.com/wuc_event_2020/side-events/ux-developer-collaboration/",
+                },
+                {
                     slides: true,
                     title: "Aligning design & development",
                     description:
                         "How better communication between designers & developers will improve your product.",
                     url: "https://aligning.netlify.com/",
-                },
-                {
-                    slides: true,
-                    title: "Space Jam!",
-                    description: "Writing HTML like it's 1996.",
-                    url: "http://space-jam-presentation.surge.sh/index.htm",
                 },
                 {
                     slides: false,
