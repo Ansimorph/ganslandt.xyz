@@ -1,9 +1,5 @@
 {
-  "spellright.language": [
-    "en"
-  ],
-  "spellright.documentTypes": [
-    "markdown",
-    "latex"
-  ]
+    "spellright.language": ["en"],
+    "spellright.documentTypes": ["markdown", "latex"],
+    "svg.preview.background": "transparent"
 }
