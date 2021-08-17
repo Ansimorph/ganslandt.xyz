@@ -23,11 +23,13 @@ AddOutputFilterByType DEFLATE text/css application/x-javascript text/x-component
     ExpiresByType image/png "access plus 60 days"
     ExpiresByType image/gif "access plus 60 days"
     ExpiresByType image/jpeg "access plus 60 days"
+    ExpiresByType image/svg+xml "access plus 60 days"
     ExpiresByType font/woff2 "access plus 60 days"
     ExpiresByType text/css "access plus 1 days"
     ExpiresByType image/x-icon "access plus 1 month"
     ExpiresByType application/pdf "access plus 1 month"
     ExpiresByType text/javascript "access plus 1 week"
+    ExpiresByType application/manifest+json "access plus 1 week"
 </IfModule>
 
 # Disable Floc
@@ -53,4 +55,3 @@ Header set Strict-Transport-Security: "max-age=63072000; includeSubDomains; prel
 # RewriteRule . / [L,R=301]
 
 ErrorDocument 404 /index.html
-
