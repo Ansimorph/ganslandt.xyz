@@ -10,6 +10,12 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Canela-fallback";
+    size-adjust: 108%;
+    src: local("Georgia");
+}
+
 h1,
 h2,
 h3 {

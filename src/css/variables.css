@@ -4,5 +4,5 @@
     --blue: #4a90e2;
     --unit-base: 0.4rem;
     --sans-family: Plex-Sans, sans-serif;
-    --headline-family: Canela, Cambria, Georgia, Times, "Times New Roman", serif;
+    --headline-family: Canela, "Canela-fallback", Georgia, serif;
 }
