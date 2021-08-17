@@ -5,7 +5,7 @@
 </template>
 
 <script>
-const interestSentence = require("../../src/_data/interestSentence.js");
+const interestSentence = require("../../../../src/_data/interestSentence.js");
 export default {
     data: () => {
         return { interestSentence };

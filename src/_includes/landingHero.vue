@@ -1,13 +1,16 @@
 <template>
     <div class="container">
         <div class="landing-hero">
-            <div class="landing-hero__image">
-                <responsiveImage
-                    src="../../src/assets/images/bjoern.jpg"
-                    alt="Björn Ganslandt"
-                    sizes="(min-width: 45em) 50vw, 100vw"
-                ></responsiveImage>
-            </div>
+            <div
+                class="landing-hero__image"
+                v-html="
+                    image(
+                        'src/assets/images/bjoern.jpg',
+                        'Björn Ganslandt',
+                        '(min-width: 45em) 50vw, 100vw',
+                    )
+                "
+            ></div>
             <div class="landing-hero__text">
                 <div class="space-12base">
                     <landingHeadline></landingHeadline>
@@ -28,14 +31,12 @@
 import landingHeadline from "./landingHeadline.vue";
 import buttonLink from "./buttonLink.vue";
 import socialMediaIcons from "./socialMediaIcons.vue";
-import responsiveImage from "./responsiveImage.vue";
 
 export default {
     components: {
         landingHeadline,
         buttonLink,
         socialMediaIcons,
-        responsiveImage,
     },
 };
 </script>
