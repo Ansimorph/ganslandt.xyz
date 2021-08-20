@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>{{title}}</title>
     <style>
         {{ page.url | getVueComponentCssForPage | safe }}
@@ -25,6 +24,8 @@
     <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png">
     <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="preload" href="/fonts/CanelaDeck-Bold-Web-subset.woff2" as="font" type="font/woff2" crossorigin> 
+    <link rel="preload" href="/fonts/IBMPlexSans-Regular-Latin1-subset.woff2" as="font" type="font/woff2" crossorigin> 
 </head>
 
 <body>
