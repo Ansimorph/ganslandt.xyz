@@ -17,11 +17,11 @@
             </a>
         </li>
         <li class="social-media-icons__icon">
-            <a href="https://twitter.com/Ansimorph/">
+            <a href="https://front-end.social/@Ansimorph" rel="me">
                 <template
-                    v-html="svgContents('/src/assets/images/icon-twitter.svg')"
+                    v-html="svgContents('/src/assets/images/icon-mastodon.svg')"
                 ></template>
-                <span class="visually-hidden">Twitter</span>
+                <span class="visually-hidden">Mastodon</span>
             </a>
         </li>
     </ul>
