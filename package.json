@@ -29,7 +29,7 @@
         "dotenv": "^8.2.0",
         "eleventy-plugin-svg-contents": "^0.7.0",
         "glob": "^7.1.6",
-        "glyphhanger": "^3.2.0",
+        "glyphhanger": "^5.0.0",
         "html-minifier": "^4.0.0",
         "postcss-calc": "^7.0.1",
         "postcss-color-function": "^4.1.0",
