@@ -60,22 +60,17 @@ export default {
 }
 
 .landing-hero__image {
-    /* Has fixed aspect ratio to prevent reflow on load */
-    --hero-aspect-ratio: calc(358 / 432);
-
     position: relative;
     z-index: -1;
     opacity: 0.9;
     width: 100vw;
     max-width: 130base;
-    height: calc(100vw * var(--hero-aspect-ratio));
-    max-height: calc(130base * var(--hero-aspect-ratio));
+    aspect-ratio: 520/431;
 
     @mixin breakpoint-m {
         width: 60%;
         height: auto;
         max-width: initial;
-        max-height: initial;
     }
 
     /* Radial Gradient to mask edges */
