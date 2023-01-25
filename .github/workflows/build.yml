@@ -8,11 +8,11 @@ jobs:
         name: Build and Deploy
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
             - uses: "actions/setup-python@v2"
               with:
                   python-version: "3.x"
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
                   node-version: "16"
             - name: "Install Python dependencies"
@@ -22,7 +22,7 @@ jobs:
             - name: Get yarn cache directory path
               id: yarn-cache-dir-path
               run: echo "::set-output name=dir::$(yarn cache dir)"
-            - uses: actions/cache@v2
+            - uses: actions/cache@v3
               id: yarn-cache
               with:
                   path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -36,7 +36,7 @@ jobs:
               env:
                   PASSWORD: ${{ secrets.PASSWORD }}
             - name: "Deploy"
-              uses: SamKirkland/FTP-Deploy-Action@4.0.0
+              uses: SamKirkland/FTP-Deploy-Action@4.3.3
               with:
                   server: ganslandt.xyz
                   username: gansland
