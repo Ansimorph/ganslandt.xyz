@@ -27,8 +27,8 @@
                 </p>
                 <h2 id="privacy">Privacy</h2>
                 <p>
-                    This page does set cookies or use tracking to analyze your
-                    behavior.
+                    This page does not set cookies or use tracking to analyze
+                    your behavior.
                 </p>
             </main>
         </div>
