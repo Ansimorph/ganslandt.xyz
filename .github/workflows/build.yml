@@ -38,7 +38,7 @@ jobs:
             - name: "Deploy"
               uses: SamKirkland/FTP-Deploy-Action@4.3.3
               with:
-                  server: ganslandt.xyz
+                  server: ftp.ganslandt.xyz
                   username: gansland
                   server-dir: "public_html/"
                   local-dir: "./dist/"
