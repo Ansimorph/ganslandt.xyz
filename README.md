@@ -7,13 +7,13 @@ The whole build is based around 11ty and tries to optimize all assets for optima
 ## Run It Locally
 
 ```bash
-  yarn install
-  yarn start
+  npm install
+  npm start
 ```
 
 ## Build It
 
 ```bash
-  yarn install
-  yarn build
+  npm install
+  npm run build
 ```
