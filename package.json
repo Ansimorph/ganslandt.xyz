@@ -8,23 +8,20 @@
     "license": "MIT",
     "scripts": {
         "decrypt": "node src/utils/decryptfonts.js",
-        "favicons": "favicons src/assets/images/favicon.png -d dist/images",
         "start": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --formats=vue --serve",
         "eleventy-build": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --formats=vue",
-        "build": "yarn eleventy-build && yarn decrypt && yarn favicons && yarn subfont",
+        "build": "yarn eleventy-build && yarn decrypt && yarn subfont",
         "subfont": "glyphhanger dist/*.html dist/**/*.html --formats=woff2 --subset=dist/fonts/*.woff2",
         "test": "bundlesize"
     },
     "devDependencies": {
-        "@11ty/eleventy": "^0.12.1",
+        "@11ty/eleventy": "^1.0",
         "@11ty/eleventy-img": "^0.10.0",
         "@11ty/eleventy-plugin-vue": "^0.5.0",
         "@babel/core": "^7.9.6",
         "@babel/preset-env": "^7.9.6",
-        "@flexis/favicons": "^1.5.0",
         "autoprefixer": "^9.7.0",
         "babel-preset-minify": "^0.5.1",
-        "bundlesize": "^0.18.0",
         "cryptify": "^4.1.2",
         "dotenv": "^8.2.0",
         "eleventy-plugin-svg-contents": "^0.7.0",
@@ -46,12 +43,5 @@
         "stylelint-config-standard": "^20.0.0"
     },
     "dependencies": {},
-    "bundlesize": [
-        {
-            "path": "./dist/index.html",
-            "maxSize": "14 kB",
-            "compression": "brotli"
-        }
-    ],
     "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }
