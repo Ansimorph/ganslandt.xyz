@@ -44,11 +44,9 @@ export default {
                 },
                 {
                     slides: false,
-                    title: "Wenn Pattern Libraries wachsen",
-                    description:
-                        "Wie man Verantwortung und Code für Patterns im Unternehmen verteilt.",
-                    url:
-                        "https://www.produktbezogen.de/wenn-pattern-libraries-wachsen-verantwortung/",
+                    title: "Vienna Climate Action Tech Meetup",
+                    description: "A meetup for a more sustainable web",
+                    url: "https://vienna-cat-meetup.pages.dev/",
                 },
                 {
                     slides: false,
