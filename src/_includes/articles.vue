@@ -34,7 +34,7 @@ export default {
                     title: "Aligning design & development",
                     description:
                         "How better communication between designers & developers will improve your product.",
-                    url: "https://aligning.netlify.com/",
+                    url: "https://aligning.netlify.app/",
                 },
                 {
                     slides: true,
@@ -52,7 +52,7 @@ export default {
                     slides: false,
                     title: "Nudelholz ",
                     description: "A synthesizer for your browser",
-                    url: "https://nudelholz.netlify.com",
+                    url: "https://nudelholz.netlify.app",
                 },
             ],
         };
@@ -67,7 +67,7 @@ export default {
 .articles-section {
     padding: 12base 0;
     color: var(--dark-grey);
-    background-color: color(var(--dark-grey) lightness(92%));
+    background-color: color-mix(in sRGB, var(--dark-grey), #fff 90%);
 }
 
 .articles-section__headline {

@@ -70,7 +70,7 @@ a {
 
     &:active {
         outline: 0;
-        color: color(var(--blue) lightness(40%));
+        color: color-mix(in sRGB, var(--blue), #000 30%);
     }
 }
 

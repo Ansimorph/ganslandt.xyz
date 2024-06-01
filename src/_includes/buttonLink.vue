@@ -30,11 +30,11 @@ export default {
 
     &:hover {
         color: var(--white);
-        background-color: color(var(--blue) lightness(50%));
+        background-color: color-mix(in hsl, var(--blue), #004 20%);
     }
 
     &:active {
-        background-color: color(var(--blue) lightness(40%));
+        background-color: color-mix(in hsl, var(--blue), #004 40%);
         outline: 0;
     }
 }

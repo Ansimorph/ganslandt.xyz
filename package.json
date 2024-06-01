@@ -29,7 +29,6 @@
         "glyphhanger": "^5.0.0",
         "html-minifier": "^4.0.0",
         "postcss-calc": "^7.0.1",
-        "postcss-color-function": "^4.1.0",
         "postcss-css-variables": "^0.13.0",
         "postcss-custom-units": "^0.1.1",
         "postcss-hexrgba": "^2.0.0",

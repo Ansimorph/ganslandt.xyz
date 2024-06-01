@@ -2,7 +2,7 @@ const eleventyVue = require("@11ty/eleventy-plugin-vue");
 const svgContents = require("eleventy-plugin-svg-contents");
 const imageShortcode = require("./src/utils/image.js");
 
-module.exports = function(config) {
+module.exports = function (config) {
     config.addPlugin(eleventyVue, {
         rollupPluginVueOptions: {
             style: {
@@ -12,7 +12,6 @@ module.exports = function(config) {
                     require("postcss-nested"),
                     require("postcss-custom-units"),
                     require("postcss-css-variables", { preserve: false }),
-                    require("postcss-color-function"),
                     require("postcss-calc"),
                     require("postcss-round-float"),
                     require("postcss-hexrgba"),
@@ -24,7 +23,7 @@ module.exports = function(config) {
 
     config.addPlugin(svgContents);
 
-    config.addFilter("babel", function(code) {
+    config.addFilter("babel", function (code) {
         const babel = require("@babel/core");
         const minified = babel.transformSync(code, {
             presets: ["minify", "@babel/preset-env"],
