@@ -19,15 +19,6 @@ module.exports = function (config) {
 
     config.addPlugin(svgContents);
 
-    config.addFilter("babel", function (code) {
-        const babel = require("@babel/core");
-        const minified = babel.transformSync(code, {
-            presets: ["minify", "@babel/preset-env"],
-        });
-
-        return minified.code;
-    });
-
     config.addTransform("htmlmin", require("./src/utils/htmlmin.js"));
 
     config.addPassthroughCopy({ "./src/assets/": "/" });
