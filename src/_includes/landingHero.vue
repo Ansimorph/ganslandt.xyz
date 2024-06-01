@@ -81,10 +81,7 @@ export default {
         right: 0;
         bottom: 0;
         top: 0;
-        background-image: radial-gradient(
-            rgba(var(--dark-grey), 0) 50%,
-            var(--dark-grey)
-        );
+        background-image: radial-gradient(#0000 50%, var(--dark-grey));
     }
 
     img {

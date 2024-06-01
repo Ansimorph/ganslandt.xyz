@@ -12,7 +12,6 @@ module.exports = function (config) {
                     require("postcss-nested"),
                     require("postcss-custom-units"),
                     require("postcss-round-float"),
-                    require("postcss-hexrgba"),
                 ],
             },
         },
