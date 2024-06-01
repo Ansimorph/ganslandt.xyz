@@ -11,8 +11,7 @@
         "start": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --formats=vue --serve",
         "eleventy-build": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --formats=vue",
         "build": "npm run eleventy-build && npm run decrypt && npm run subfont",
-        "subfont": "glyphhanger dist/*.html dist/**/*.html --formats=woff2 --subset=dist/fonts/*.woff2",
-        "test": "bundlesize"
+        "subfont": "glyphhanger dist/*.html dist/**/*.html --formats=woff2 --subset=dist/fonts/*.woff2"
     },
     "devDependencies": {
         "@11ty/eleventy": "^2.0.1",
