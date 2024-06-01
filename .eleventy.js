@@ -1,6 +1,7 @@
 const eleventyVue = require("@11ty/eleventy-plugin-vue");
 const svgContents = require("eleventy-plugin-svg-contents");
 const imageShortcode = require("./src/utils/image.js");
+const htmlnano = require("htmlnano");
 
 module.exports = function (config) {
     config.addPlugin(eleventyVue, {
@@ -9,7 +10,6 @@ module.exports = function (config) {
                 postcssPlugins: [
                     require("postcss-import"),
                     require("postcss-mixins"),
-                    require("postcss-nested"),
                     require("postcss-custom-units"),
                     require("postcss-round-float"),
                 ],
@@ -19,7 +19,12 @@ module.exports = function (config) {
 
     config.addPlugin(svgContents);
 
-    config.addTransform("htmlmin", require("./src/utils/htmlmin.js"));
+    config.addTransform("htmlnano", async (content, outputPath) => {
+        if (!outputPath.endsWith("html")) return content;
+
+        const result = await htmlnano.process(content);
+        return result.html;
+    });
 
     config.addPassthroughCopy({ "./src/assets/": "/" });
 
