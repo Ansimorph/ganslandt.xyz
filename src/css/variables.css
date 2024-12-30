@@ -1,8 +1,7 @@
 :root {
-    --dark-grey: #303333;
-    --white: #fff;
-    --blue: #4a90e2;
-    --unit-base: 0.4rem;
-    --sans-family: Plex-Sans, sans-serif;
-    --headline-family: Canela, "Canela-fallback", Georgia, serif;
+  --dark-grey: #303333;
+  --white: #fff;
+  --blue: #4a90e2;
+  --sans-family: plex-sans, sans-serif;
+  --headline-family: canela, "Canela-fallback", georgia, serif;
 }
