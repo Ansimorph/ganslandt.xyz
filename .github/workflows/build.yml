@@ -1,46 +1,46 @@
 name: CI
 on:
-    push:
-        branches:
-            - master
+  push:
+    branches:
+      - master
 jobs:
-    build:
-        name: Build and Deploy
-        runs-on: ubuntu-22.04
-        steps:
-            - uses: actions/checkout@v3
-            - uses: "actions/setup-python@v2"
-              with:
-                  python-version: "3.x"
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: "22"
-            - name: "Install Python dependencies"
-              run: |
-                  python -m pip install --upgrade pip
-                  pip install -r requirements.txt
-            - name: Get npm cache directory
-              id: npm-cache-dir
-              shell: bash
-              run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
-            - uses: actions/cache@v3
-              id: npm-cache
-              with:
-                  path: ${{ steps.npm-cache-dir.outputs.dir }}
-                  key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-                  restore-keys: |
-                      ${{ runner.os }}-node-
-            - name: "Install NPM dependencies"
-              run: "npm install"
-            - name: "Build"
-              run: "npm run build"
-              env:
-                  PASSWORD: ${{ secrets.PASSWORD }}
-            - name: "Deploy"
-              uses: SamKirkland/FTP-Deploy-Action@4.3.3
-              with:
-                  server: ftp.ganslandt.xyz
-                  username: gansland
-                  server-dir: "public_html/"
-                  local-dir: "./dist/"
-                  password: ${{ secrets.FTP_PASSWORD }}
+  build:
+    name: Build and Deploy
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.x"
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "22"
+      - name: "Install Python dependencies"
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+      - uses: actions/cache@v3
+        id: npm-cache
+        with:
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: "Install NPM dependencies"
+        run: "npm install"
+      - name: "Build"
+        run: "npm run build"
+        env:
+          PASSWORD: ${{ secrets.PASSWORD }}
+      - name: "Deploy"
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ftp.ganslandt.xyz
+          username: gansland
+          server-dir: "public_html/"
+          local-dir: "./dist/"
+          password: ${{ secrets.FTP_PASSWORD }}

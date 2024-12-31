@@ -1,5 +1,5 @@
 {
-    "trailingComma": "all",
-    "singleQuote": false,
-    "vueIndentScriptAndStyle": false
+  "trailingComma": "all",
+  "singleQuote": false,
+  "vueIndentScriptAndStyle": false
 }

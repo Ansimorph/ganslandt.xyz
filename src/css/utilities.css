@@ -1,32 +1,32 @@
 .visually-hidden {
-    /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
+  /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .space-6base {
-    margin-bottom: 6base;
+  margin-bottom: 6base;
 }
 
 .space-8base {
-    margin-bottom: 8base;
+  margin-bottom: 8base;
 }
 
 .space-10base {
-    margin-bottom: 10base;
+  margin-bottom: 10base;
 }
 
 .space-12base {
-    margin-bottom: 12base;
+  margin-bottom: 12base;
 }
 
 .container {
-    width: 100%;
-    max-width: 120rem;
-    padding-left: 8base;
-    padding-right: 8base;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 120rem;
+  padding-left: 8base;
+  padding-right: 8base;
+  margin: 0 auto;
 }
