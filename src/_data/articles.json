@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Vienna Climate Action Tech Meetup",
+    "description": "A meetup for a more sustainable web",
+    "url": "https://vienna-cat-meetup.pages.dev/",
+    "cta": "Read more"
+  },
+  {
+    "title": "Aligning design & development",
+    "description": "How better communication between designers & developers will improve your product.",
+    "url": "https://aligning.netlify.app/",
+    "cta": "Read more"
+  },
+  {
+    "title": "Nudelholz",
+    "description": "A synthesizer for your browser",
+    "url": "https://nudelholz.netlify.app",
+    "cta": "Try it"
+  },
+  {
+    "title": "Space Jam!",
+    "description": "Writing HTML like it's 1996.",
+    "url": "http://space-jam-presentation.surge.sh/index.htm",
+    "cta": "Read more"
+  }
+]

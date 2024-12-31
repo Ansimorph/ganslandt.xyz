@@ -1,80 +1,77 @@
-@import "../css/variables.css";
-@import "../css/mixins.css";
-
 @font-face {
-    font-family: "Canela";
-    src: url("/fonts/CanelaDeck-Bold-Web-subset.woff2") format("woff2");
-    font-weight: 700;
-    font-style: normal;
-    font-stretch: normal;
-    font-display: swap;
+  font-family: "Canela";
+  src: url("/fonts/CanelaDeck-Bold-Web-subset.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Canela-fallback";
-    size-adjust: 108%;
-    src: local("Georgia");
+  font-family: "Canela-fallback";
+  size-adjust: 108%;
+  src: local("Georgia");
 }
 
 h1,
 h2,
 h3 {
-    font-weight: 700;
-    font-family: var(--headline-family);
+  font-weight: 700;
+  font-family: var(--headline-family);
 }
 
 h1 {
-    font-size: 7base;
-    line-height: 9base;
+  font-size: 7base;
+  line-height: 9base;
 
-    @mixin breakpoint-l {
-        font-size: 8base;
-        line-height: 10base;
-    }
+  @mixin breakpoint-l {
+    font-size: 8base;
+    line-height: 10base;
+  }
 }
 
 h2 {
-    font-size: 5base;
-    line-height: 6base;
+  font-size: 5base;
+  line-height: 6base;
 
-    @mixin breakpoint-l {
-        font-size: 6base;
-        line-height: 7base;
-    }
+  @mixin breakpoint-l {
+    font-size: 6base;
+    line-height: 7base;
+  }
 }
 
 h3 {
-    font-size: 4.5base;
-    line-height: 5.5base;
+  font-size: 4.5base;
+  line-height: 5.5base;
 
-    @mixin breakpoint-l {
-        font-size: 5.5base;
-        line-height: 6.5base;
-    }
+  @mixin breakpoint-l {
+    font-size: 5.5base;
+    line-height: 6.5base;
+  }
 }
 
 a {
+  color: currentColor;
+
+  &:visited {
     color: currentColor;
+  }
 
-    &:visited {
-        color: currentColor;
-    }
+  &:hover {
+    color: var(--blue);
+  }
 
-    &:hover {
-        color: var(--blue);
-    }
+  &:focus {
+    @mixin focus-style;
+  }
 
-    &:focus {
-        @mixin focus-style;
-    }
-
-    &:active {
-        outline: 0;
-        color: color-mix(in sRGB, var(--blue), #000 30%);
-    }
+  &:active {
+    outline: 0;
+    color: color-mix(in sRGB, var(--blue), #000 30%);
+  }
 }
 
 ::selection {
-    background-color: var(--blue);
-    color: var(--white);
+  background-color: var(--blue);
+  color: var(--white);
 }

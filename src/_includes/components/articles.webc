@@ -1,0 +1,68 @@
+<section class="articles-section">
+  <div class="container">
+    <h2 class="articles-section__headline">Sideprojects & Articles</h2>
+    <div class="articles">
+      <article class="articles__entry" webc:for="article of $data.articles">
+        <h3 class="articles__title" @text="article.title"></h3>
+        <p class="articles__description" @text="article.description"></p>
+        <a class="articles__link" :href="article.url" @text="article.cta"></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<link rel="stylesheet" href="../../css/mixins.css" />
+
+<style>
+  .articles-section {
+    padding: 12base 0;
+    color: var(--dark-grey);
+    background-color: color-mix(in sRGB, var(--dark-grey), #fff 90%);
+  }
+
+  .articles-section__headline {
+    display: block;
+    margin-bottom: 12base;
+    text-align: center;
+  }
+
+  .articles {
+    display: grid;
+    grid-gap: 8base;
+
+    @mixin breakpoint-m {
+      grid-template-columns: repeat(auto-fit, minmax(100base, 1fr));
+    }
+  }
+
+  .articles__entry {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 8base;
+    font-size: 4.5base;
+    line-height: 6base;
+    background-color: var(--white);
+  }
+
+  .articles__title,
+  .articles__description {
+    margin-bottom: 5base;
+    max-width: 150base;
+  }
+
+  .articles__description {
+    flex: 1;
+  }
+
+  .articles__link {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+</style>

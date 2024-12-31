@@ -1,0 +1,53 @@
+---
+layout: "layout.webc"
+title: "Björn Ganslandt: freelance frontend web developer"
+---
+
+<div>
+  <main>
+    <landing-hero
+      webc:import="./_includes/components/landing-hero.webc"
+    ></landing-hero>
+    <section
+      webc:nokeep
+      webc:import="./_includes/components/articles.webc"
+    ></section>
+  </main>
+  <footer
+    webc:nokeep
+    webc:import="./_includes/components/footer-element.webc"
+  ></footer>
+</div>
+
+<link rel="stylesheet" href="./css/variables.css" />
+<link rel="stylesheet" href="./css/mixins.css" />
+<link rel="stylesheet" href="./css/reset.css" />
+<link rel="stylesheet" href="./css/utilities.css" />
+<link rel="stylesheet" href="./css/typography.css" />
+
+<style>
+  @font-face {
+    font-family: "Plex-Sans";
+    src: url("/fonts/IBMPlexSans-Regular-Latin1-subset.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--dark-grey);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+  }
+</style>
