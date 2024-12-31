@@ -1,4 +1,3 @@
-import svgContents from "eleventy-plugin-svg-contents";
 import htmlnano from "htmlnano";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import postcssMixins from "postcss-mixins";
@@ -29,8 +28,6 @@ export default function (eleventyConfig) {
       ],
     },
   });
-
-  eleventyConfig.addPlugin(svgContents);
 
   eleventyConfig.addTransform("htmlnano", async (content, outputPath) => {
     if (!outputPath.endsWith("html")) return content;

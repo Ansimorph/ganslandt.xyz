@@ -35,6 +35,13 @@
       type="font/woff2"
       crossorigin
     />
+
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/mixins.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/utilities.css" />
+    <link rel="stylesheet" href="../css/typography.css" />
+
     <style @raw="getBundle('css')" webc:keep></style>
   </head>
 

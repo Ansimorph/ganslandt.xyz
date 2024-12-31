@@ -19,12 +19,6 @@ title: "Björn Ganslandt: freelance frontend web developer"
   ></footer>
 </div>
 
-<link rel="stylesheet" href="./css/variables.css" />
-<link rel="stylesheet" href="./css/mixins.css" />
-<link rel="stylesheet" href="./css/reset.css" />
-<link rel="stylesheet" href="./css/utilities.css" />
-<link rel="stylesheet" href="./css/typography.css" />
-
 <style>
   @font-face {
     font-family: "Plex-Sans";

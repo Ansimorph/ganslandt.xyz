@@ -20,7 +20,6 @@
     "cryptify": "^4.1.2",
     "cssnano": "^7.0.1",
     "dotenv": "^8.2.0",
-    "eleventy-plugin-svg-contents": "^0.7.0",
     "glob": "^7.1.6",
     "glyphhanger": "^5.0.0",
     "htmlnano": "^2.1.1",
