@@ -45,7 +45,5 @@
     <style @raw="getBundle('css')" webc:keep></style>
   </head>
 
-  <body>
-    <body @raw="content"></body>
-  </body>
+  <body @raw="content"></body>
 </html>

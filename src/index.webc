@@ -3,21 +3,19 @@ layout: "layout.webc"
 title: "Björn Ganslandt: freelance frontend web developer"
 ---
 
-<div>
-  <main>
-    <landing-hero
-      webc:import="./_includes/components/landing-hero.webc"
-    ></landing-hero>
-    <section
-      webc:nokeep
-      webc:import="./_includes/components/articles.webc"
-    ></section>
-  </main>
-  <footer
+<main>
+  <landing-hero
+    webc:import="./_includes/components/landing-hero.webc"
+  ></landing-hero>
+  <section
     webc:nokeep
-    webc:import="./_includes/components/footer-element.webc"
-  ></footer>
-</div>
+    webc:import="./_includes/components/articles.webc"
+  ></section>
+</main>
+<footer
+  webc:nokeep
+  webc:import="./_includes/components/footer-element.webc"
+></footer>
 
 <style>
   @font-face {
