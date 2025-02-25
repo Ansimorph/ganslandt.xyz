@@ -41,6 +41,7 @@ jobs:
         with:
           server: ftp.ganslandt.xyz
           username: gansland
+          protocol: ftps
           server-dir: "public_html/"
           local-dir: "./dist/"
           exclude: |
