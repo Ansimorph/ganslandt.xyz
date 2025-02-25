@@ -43,4 +43,9 @@ jobs:
           username: gansland
           server-dir: "public_html/"
           local-dir: "./dist/"
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/nobots/**
           password: ${{ secrets.FTP_PASSWORD }}
