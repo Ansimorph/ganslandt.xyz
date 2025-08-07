@@ -3,9 +3,14 @@
     <h2 class="articles-section__headline">Sideprojects & Articles</h2>
     <div class="articles">
       <article class="articles__entry" webc:for="article of $data.articles">
-        <h3 class="articles__title" @text="article.title"></h3>
+        <h3 class="articles__title">
+          <a
+            class="articles__link"
+            :href="article.url"
+            @text="article.title"
+          ></a>
+        </h3>
         <p class="articles__description" @text="article.description"></p>
-        <a class="articles__link" :href="article.url" @text="article.cta"></a>
       </article>
     </div>
   </div>
