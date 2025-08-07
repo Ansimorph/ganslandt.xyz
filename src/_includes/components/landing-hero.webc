@@ -2,6 +2,7 @@
   <div class="landing-hero">
     <div class="landing-hero__image">
       <img
+        class="landing-hero__img-element"
         src="assets/images/bjoern.jpg"
         alt="Björn Ganslandt"
         sizes="(min-width: 45em) 50vw, 100vw"
@@ -59,21 +60,22 @@
       height: auto;
       max-width: initial;
     }
+  }
 
-    /* Radial Gradient to mask edges */
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      background-image: radial-gradient(#0000 50%, var(--dark-grey));
-    }
+  /* Radial Gradient to mask edges */
+  .landing-hero__image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: radial-gradient(#0000 50%, var(--dark-grey));
+  }
 
-    img {
-      height: auto;
-    }
+  .landing-hero__img-element {
+    height: auto;
+    width: 100%;
   }
 
   .landing-hero__text {
