@@ -53,6 +53,10 @@
       margin-right: 6base;
     }
 
+    a {
+      display: block;
+    }
+
     svg {
       fill: currentColor;
       width: 8base;
