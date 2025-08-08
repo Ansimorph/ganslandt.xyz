@@ -1,8 +1,4 @@
 @layer reset {
-  html {
-    font-size: 62.5%; /* Rem Base */
-  }
-
   *,
   *::before,
   *::after {
