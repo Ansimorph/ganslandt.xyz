@@ -1,22 +1,20 @@
-@layer reset {
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  *:not(input) {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-  }
+*:not(input) {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
 
-  ol,
-  ul {
-    list-style: none;
-  }
+ol,
+ul {
+  list-style: none;
+}
 
-  img {
-    width: 100%;
-  }
+img {
+  width: 100%;
 }

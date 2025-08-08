@@ -75,7 +75,6 @@
 
   .landing-hero__img-element {
     height: auto;
-    width: 100%;
   }
 
   .landing-hero__text {

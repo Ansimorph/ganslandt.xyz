@@ -19,7 +19,7 @@ export default function (eleventyConfig) {
               units: [
                 {
                   from: "base",
-                  convert: (val) => Math.round(val * 4) / 10 + "rem",
+                  convert: (val) => Math.round(val * 2.5) / 10 + "rem",
                 },
               ],
             }),

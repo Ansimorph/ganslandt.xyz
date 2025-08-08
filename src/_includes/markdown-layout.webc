@@ -3,7 +3,7 @@ layout: "layout.webc"
 ---
 
 <header webc:import="./components/header-element.webc"></header>
-<div class="container">
+<div class="container markdown">
   <main @raw="content"></main>
 </div>
 
@@ -26,22 +26,24 @@ layout: "layout.webc"
     font-display: swap;
   }
 
-  main {
-    font-size: 4.5base;
-    font-family: "Plex-Serif", serif;
-    line-height: 7base;
-    padding-top: 8base;
-    padding-bottom: 8base;
-    max-width: 60ch;
-  }
+  .markdown {
+    main {
+      font-size: 4.5base;
+      font-family: "Plex-Serif", serif;
+      line-height: 7base;
+      padding-top: 8base;
+      padding-bottom: 8base;
+      max-width: 60ch;
+    }
 
-  h1,
-  h2,
-  p {
-    margin-bottom: 4base;
-  }
+    h1,
+    h2,
+    p {
+      margin-bottom: 4base;
+    }
 
-  p + h2 {
-    margin-top: 14base;
+    p + h2 {
+      margin-top: 14base;
+    }
   }
 </style>
