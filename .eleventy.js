@@ -3,6 +3,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import postcssMixins from "postcss-mixins";
 import postcssCustomUnit from "postcss-custom-unit";
 import pluginWebc from "@11ty/eleventy-plugin-webc";
+import postCssNested from "postcss-nested";
 import postcss from "postcss";
 
 export default function (eleventyConfig) {
@@ -13,6 +14,7 @@ export default function (eleventyConfig) {
           let { type, page } = this;
           let result = await postcss([
             postcssMixins,
+            postCssNested,
             postcssCustomUnit({
               units: [
                 {

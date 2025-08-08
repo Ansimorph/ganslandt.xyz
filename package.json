@@ -23,6 +23,7 @@
     "postcss": "^8.4.49",
     "postcss-custom-unit": "^1.0.0",
     "postcss-mixins": "^6.2.2",
+    "postcss-nested": "^7.0.2",
     "stylelint": "^13.5.0",
     "stylelint-config-prettier": "^8.0.0",
     "stylelint-config-standard": "^20.0.0"
